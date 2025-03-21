@@ -1,0 +1,5348 @@
+Akshnav-main Directory Analysis
+==============================
+
+File: .gitattributes
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: akshnav.csproj
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <!-- TODO: Upgrade -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{665C2870-4EDA-4BF7-9C5C-070D5D5FBBE7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>MCenters</AssemblyName>
+    <ApplicationVersion>1.0.0.2</ApplicationVersion>
+    <OutputType>exe</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <!-- TODO: Check if this is correct -->
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="Microsoft.NETFramework.ReferenceAssemblies" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="_003CModule_003E.cs" />
+    <Compile Include="__scrt_native_startup_state.cs" />
+    <Compile Include="_GUID.cs" />
+    <Compile Include="IUnknown.cs" />
+    <Compile Include="gcroot_003CSystem_003A_003AString ^_003E.cs" />
+    <Compile Include="__s_GUID.cs" />
+    <Compile Include="ICLRRuntimeHost.cs" />
+    <Compile Include="ICorRuntimeHost.cs" />
+    <Compile Include="_EXCEPTION_POINTERS.cs" />
+    <Compile Include="_003CCrtImplementationDetails_003E\ModuleLoadException.cs" />
+    <Compile Include="_003CCrtImplementationDetails_003E\ModuleLoadExceptionHandlerException.cs" />
+    <Compile Include="_003CCrtImplementationDetails_003E\ModuleUninitializer.cs" />
+    <Compile Include="_003CCrtImplementationDetails_003E\TriBool.cs" />
+    <Compile Include="_003CCrtImplementationDetails_003E\Progress.cs" />
+    <Compile Include="_003CCrtImplementationDetails_003E\LanguageSupport.cs" />
+    <Compile Include="_003CCrtImplementationDetails_003E\ThisModule.cs" />
+    <Compile Include="_003CCppImplementationDetails_003E\$ArrayType$$$BY0A@P6AHXZ.cs" />
+    <Compile Include="_003CCppImplementationDetails_003E\$ArrayType$$$BY00Q6MPEBXXZ.cs" />
+    <Compile Include="_003CCppImplementationDetails_003E\$ArrayType$$$BY0A@P6AXXZ.cs" />
+    <Compile Include="M_Centers\MainWindow.cs" />
+    <Compile Include="M_Centers\App.cs" />
+    <Compile Include="mcenters\SerializeDeserialize`1.cs" />
+    <Compile Include="mcenters\Settings.cs" />
+    <Compile Include="mcenters\Logger.cs" />
+    <Compile Include="mcenters\Patch.cs" />
+    <Compile Include="mcenters\API.cs" />
+    <Compile Include="mcenters\PrepareResults.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="mainwindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
+```
+--------------------------------------------------
+
+File: akshnav.sln
+Guessed Purpose: Unknown purpose
+Content:
+```
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "akshnav", "akshnav.csproj", "{665C2870-4EDA-4BF7-9C5C-070D5D5FBBE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{665C2870-4EDA-4BF7-9C5C-070D5D5FBBE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{665C2870-4EDA-4BF7-9C5C-070D5D5FBBE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{665C2870-4EDA-4BF7-9C5C-070D5D5FBBE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{665C2870-4EDA-4BF7-9C5C-070D5D5FBBE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24824C44-A788-428B-B569-5FF987E67837}
+	EndGlobalSection
+EndGlobal
+
+```
+--------------------------------------------------
+
+File: akshnav_analysis.txt
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: AssemblyInfo.cs
+Guessed Purpose: Assembly metadata (version, etc.)
+Content:
+```
+﻿using System.Reflection;
+using System.Security;
+using System.Security.Permissions;
+
+[assembly: SecurityRules(SecurityRuleSet.Level1)]
+[assembly: AssemblyVersion("0.0.0.0")]
+[assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
+
+```
+--------------------------------------------------
+
+File: gcroot_003CSystem_003A_003AString ^_003E.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+[NativeCppClass]
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+internal struct gcroot<System::String ^>
+{
+  private long <alignment member>;
+}
+
+```
+--------------------------------------------------
+
+File: ICLRRuntimeHost.cs
+Guessed Purpose: CLR hosting for C++ interop
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+[NativeCppClass]
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+internal struct ICLRRuntimeHost
+{
+  private long <alignment member>;
+}
+
+```
+--------------------------------------------------
+
+File: ICorRuntimeHost.cs
+Guessed Purpose: CLR hosting for C++ interop
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+[NativeCppClass]
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+internal struct ICorRuntimeHost
+{
+  private long <alignment member>;
+}
+
+```
+--------------------------------------------------
+
+File: informar.py
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: IUnknown.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+[NativeCppClass]
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+internal struct IUnknown
+{
+  private long <alignment member>;
+}
+
+```
+--------------------------------------------------
+
+File: LICENSE
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: mainwindow.xaml
+Guessed Purpose: UI definition or code-behind for the app window
+Content:
+```
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+         Height="584" Width="757"  FontFamily="Arial Black" Foreground="White">
+
+
+    <Grid x:Name="rootGrid">
+        <Rectangle RadiusX="30" RadiusY="30">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FF172446" Opacity="0.98"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Grid x:Name="backgroundGrid" Margin="10,14,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="11*"/>
+                <RowDefinition Height="42*"/>
+                <RowDefinition Height="61*"/>
+                <RowDefinition Height="278*"/>
+                <RowDefinition Height="85*"/>
+                <RowDefinition Height="49*"/>
+                <RowDefinition Height="58*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="106*"/>
+                <ColumnDefinition Width="118*"/>
+                <ColumnDefinition Width="95*"/>
+                <ColumnDefinition Width="28*"/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="5" Grid.RowSpan="2" Grid.Column="2" Margin="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <RadioButton x:Name="minecraftReleaseRadioButton" Content="Minecraft Release" FontSize="15" Margin="22,10,22,10" IsChecked="True" >
+
+                    <RadioButton.Foreground>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FFE0DADA"/>
+                            <GradientStop Color="White" Offset="1"/>
+                            <GradientStop Color="#FFC7B4B4" Offset="0.437"/>
+                        </RadialGradientBrush>
+                    </RadioButton.Foreground>
+                </RadioButton>
+                <RadioButton x:Name="minecraftBetaRadioButton" Grid.Row="1" Content="Minecraft Beta" FontSize="15" Margin="22,10,49,10" >
+
+                    <RadioButton.Foreground>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FFE0DADA"/>
+                            <GradientStop Color="White" Offset="1"/>
+                            <GradientStop Color="#FFC7B4B4" Offset="0.437"/>
+                        </RadialGradientBrush>
+                    </RadioButton.Foreground>
+                </RadioButton>
+            </Grid>
+            
+
+            <Button x:Name="InjectButton" Content="Inject"  Foreground="White" FontWeight="Bold"  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1" FontSize="18">
+                <Button.Background>
+                    <SolidColorBrush Color="#F0302D00" Opacity="0.7"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="ClipSVCButton" Content="Fix ClipSVC"  Foreground="White" FontWeight="Bold"  Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="1" FontSize="18">
+                <Button.Background>
+                    <SolidColorBrush Color="#F0302D00" Opacity="0.7"/>
+                </Button.Background>
+            </Button>
+            <StackPanel Grid.Row="3" Grid.Column="1">
+                <StackPanel.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.3"/>
+                </StackPanel.Background>
+                <CheckBox x:Name="trialBox" Content="Enable Trial"  FontStretch="Medium" FontSize="14"  Grid.Row="3" Grid.Column="1" Foreground="White" VerticalAlignment="Top" Height="15"  />
+            </StackPanel>
+            <TextBlock  TextWrapping="Wrap" Text="Akshnav (Preview)" TextAlignment="Center" FontWeight="Bold" FontSize="36" FontFamily="Arial Black" Grid.Row="2" Grid.ColumnSpan="5" />
+            <TextBlock x:Name="closeButton" TextWrapping="Wrap" Text="X" Background="Red"  TextAlignment="Center" FontWeight="Bold"  FontFamily="Arial Black" FontSize="30"   Grid.Column="3"  Grid.Row="1" FlowDirection="RightToLeft" Padding="0,0,0,5" Grid.ColumnSpan="2" Margin="200,0,0,0" />
+
+            <RichTextBox  x:Name="outputBox" Grid.Column="1" Grid.ColumnSpan="4"  Grid.Row="3"   FontSize="15" FontFamily="Arial"  OpacityMask="#FFF9F4F4" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" IsReadOnly="True" Margin="223,0,0,0">
+                <RichTextBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0.99"/>
+                </RichTextBox.Background>
+            </RichTextBox>
+
+            <Button x:Name="ContactButton" Content="Contact Us"  Foreground="White" FontWeight="Bold" Margin="10,0,10,0" VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="1" FontSize="18">
+                <Button.Background>
+                    <SolidColorBrush Color="#F0302D00" Opacity="0.7"/>
+                </Button.Background>
+            </Button>
+            <TextBlock x:Name="VersionBox" Text="Version 1.0.0" Grid.Column="1" Grid.Row="6" VerticalAlignment="Bottom"/>
+        </Grid>
+
+    </Grid>
+</Page>
+
+```
+--------------------------------------------------
+
+File: README.md
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: UpgradeLog.htm
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: _003CModule_003E.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using <CppImplementationDetails>;
+using <CrtImplementationDetails>;
+using M_Centers;
+using mcenters;
+using System;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System.Runtime.ConstrainedExecution;
+using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices;
+using System.Security;
+using System.Security.Permissions;
+using System.Threading;
+
+#nullable disable
+internal class <Module>
+{
+  public static __FnPtr<void ()> __m2mep@?MainLogic@@$$FYAXXZ;
+  internal static int __@@_PchSym_@00@UkiltiznnrmtUzkkhUhlfixvUivklhUnxvmgvihUivhlfixvhUcGEUmlmLfdkLnlwvUkilxvhhOlyq@4B2008FD98C1DD4;
+  public static __FnPtr<void (char*)> __m2mep@?AddLog@@$$FYAXPEB_W@Z;
+  public static __FnPtr<void (char*, char*)> __m2mep@?AddLog@@$$FYAXPEB_W0@Z;
+  public static __FnPtr<void (char*)> __m2mep@?AddError@@$$FYAXPEB_W@Z;
+  internal static __s_GUID _GUID_cb2f6723_ab3a_11d2_9c40_00c04fa30a3e;
+  internal static __s_GUID _GUID_cb2f6722_ab3a_11d2_9c40_00c04fa30a3e;
+  [FixedAddressValueType]
+  internal static int ?Uninitialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA;
+  internal static __FnPtr<void ()> ?A0xeb4f7d22.?Uninitialized$initializer$@CurrentDomain@<CrtImplementationDetails>@@$$Q2P6MXXZEA;
+  [FixedAddressValueType]
+  internal static Progress ?InitializedNative@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A;
+  internal static __FnPtr<void ()> ?A0xeb4f7d22.?InitializedNative$initializer$@CurrentDomain@<CrtImplementationDetails>@@$$Q2P6MXXZEA;
+  internal static __s_GUID _GUID_90f1a06c_7712_4762_86b5_7a5eba6bdb02;
+  internal static __s_GUID _GUID_90f1a06e_7712_4762_86b5_7a5eba6bdb02;
+  [FixedAddressValueType]
+  internal static Progress ?InitializedPerAppDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A;
+  internal static bool ?Entered@DefaultDomain@<CrtImplementationDetails>@@2_NA;
+  internal static TriBool ?hasNative@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A;
+  internal static bool ?InitializedPerProcess@DefaultDomain@<CrtImplementationDetails>@@2_NA;
+  internal static int ?Count@AllDomains@<CrtImplementationDetails>@@2HA;
+  [FixedAddressValueType]
+  internal static int ?Initialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA;
+  internal static bool ?InitializedNativeFromCCTOR@DefaultDomain@<CrtImplementationDetails>@@2_NA;
+  [FixedAddressValueType]
+  internal static bool ?IsDefaultDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2_NA;
+  [FixedAddressValueType]
+  internal static Progress ?InitializedVtables@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A;
+  internal static bool ?InitializedNative@DefaultDomain@<CrtImplementationDetails>@@2_NA;
+  [FixedAddressValueType]
+  internal static Progress ?InitializedPerProcess@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A;
+  internal static TriBool ?hasPerProcess@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A;
+  internal static $ArrayType$$$BY00Q6MPEBXXZ __xc_mp_z;
+  internal static $ArrayType$$$BY00Q6MPEBXXZ __xi_vt_z;
+  internal static __FnPtr<void ()> ?A0xeb4f7d22.?InitializedPerProcess$initializer$@CurrentDomain@<CrtImplementationDetails>@@$$Q2P6MXXZEA;
+  internal static $ArrayType$$$BY00Q6MPEBXXZ __xc_ma_a;
+  internal static $ArrayType$$$BY00Q6MPEBXXZ __xc_ma_z;
+  internal static __FnPtr<void ()> ?A0xeb4f7d22.?InitializedPerAppDomain$initializer$@CurrentDomain@<CrtImplementationDetails>@@$$Q2P6MXXZEA;
+  internal static $ArrayType$$$BY00Q6MPEBXXZ __xi_vt_a;
+  internal static __FnPtr<void ()> ?A0xeb4f7d22.?Initialized$initializer$@CurrentDomain@<CrtImplementationDetails>@@$$Q2P6MXXZEA;
+  internal static $ArrayType$$$BY00Q6MPEBXXZ __xc_mp_a;
+  internal static __FnPtr<void ()> ?A0xeb4f7d22.?InitializedVtables$initializer$@CurrentDomain@<CrtImplementationDetails>@@$$Q2P6MXXZEA;
+  internal static __FnPtr<void ()> ?A0xeb4f7d22.?IsDefaultDomain$initializer$@CurrentDomain@<CrtImplementationDetails>@@$$Q2P6MXXZEA;
+  public static __FnPtr<int (void*)> __m2mep@?DoNothing@DefaultDomain@<CrtImplementationDetails>@@$$FCAJPEAX@Z;
+  public static __FnPtr<int (void*)> __m2mep@?_UninitializeDefaultDomain@LanguageSupport@<CrtImplementationDetails>@@$$FCAJPEAX@Z;
+  public static unsafe int** __unep@?DoNothing@DefaultDomain@<CrtImplementationDetails>@@$$FCAJPEAX@Z;
+  public static unsafe int** __unep@?_UninitializeDefaultDomain@LanguageSupport@<CrtImplementationDetails>@@$$FCAJPEAX@Z;
+  internal static unsafe __FnPtr<void ()>* ?A0xdf32f105.__onexitbegin_m;
+  internal static ulong ?A0xdf32f105.__exit_list_size;
+  [FixedAddressValueType]
+  internal static unsafe __FnPtr<void ()>* __onexitend_app_domain;
+  [FixedAddressValueType]
+  internal static unsafe void* ?_lock@AtExitLock@<CrtImplementationDetails>@@$$Q0PEAXEA;
+  [FixedAddressValueType]
+  internal static int ?_ref_count@AtExitLock@<CrtImplementationDetails>@@$$Q0HA;
+  internal static unsafe __FnPtr<void ()>* ?A0xdf32f105.__onexitend_m;
+  [FixedAddressValueType]
+  internal static ulong __exit_list_size_app_domain;
+  [FixedAddressValueType]
+  internal static unsafe __FnPtr<void ()>* __onexitbegin_app_domain;
+  internal static $ArrayType$$$BY0A@P6AHXZ __xi_z;
+  internal static __scrt_native_startup_state __scrt_current_native_startup_state;
+  internal static unsafe void* __scrt_native_startup_lock;
+  internal static $ArrayType$$$BY0A@P6AXXZ __xc_a;
+  internal static $ArrayType$$$BY0A@P6AHXZ __xi_a;
+  internal static uint __scrt_native_dllmain_reason;
+  internal static $ArrayType$$$BY0A@P6AXXZ __xc_z;
+
+  [STAThread]
+  internal static void MainLogic()
+  {
+    Thread thread = new Thread(new ThreadStart(App.mainlogic));
+    thread.SetApartmentState(ApartmentState.STA);
+    thread.Start();
+    thread.Join();
+  }
+
+  internal static unsafe void AddLog(char* value) => Logger.AddLog(new string(value));
+
+  internal static unsafe void AddLog(char* field, char* value)
+  {
+    Logger.AddLog(new string(field), new string(value));
+  }
+
+  internal static unsafe void AddError(char* value) => Logger.AddError(new string(value));
+
+  internal static void <CrtImplementationDetails>.ThrowNestedModuleLoadException(
+    Exception innerException,
+    Exception nestedException)
+  {
+    throw new ModuleLoadExceptionHandlerException("A nested exception occurred after the primary exception that caused the C++ module to fail to load.%n", innerException, nestedException);
+  }
+
+  internal static void <CrtImplementationDetails>.ThrowModuleLoadException(
+    string errorMessage)
+  {
+    throw new ModuleLoadException(errorMessage);
+  }
+
+  internal static void <CrtImplementationDetails>.ThrowModuleLoadException(
+    string errorMessage,
+    Exception innerException)
+  {
+    throw new ModuleLoadException(errorMessage, innerException);
+  }
+
+  internal static void <CrtImplementationDetails>.RegisterModuleUninitializer(
+    EventHandler handler)
+  {
+    ModuleUninitializer._ModuleUninitializer.AddHandler(handler);
+  }
+
+  [SecuritySafeCritical]
+  internal static unsafe Guid <CrtImplementationDetails>.FromGUID(_GUID* guid)
+  {
+    return new Guid((uint) *(int*) guid, *(ushort*) ((IntPtr) guid + 4L), *(ushort*) ((IntPtr) guid + 6L), *(byte*) ((IntPtr) guid + 8L), *(byte*) ((IntPtr) guid + 9L), *(byte*) ((IntPtr) guid + 10L), *(byte*) ((IntPtr) guid + 11L), *(byte*) ((IntPtr) guid + 12L), *(byte*) ((IntPtr) guid + 13L), *(byte*) ((IntPtr) guid + 14L), *(byte*) ((IntPtr) guid + 15L));
+  }
+
+  [SecurityCritical]
+  internal static unsafe int __get_default_appdomain(IUnknown** ppUnk)
+  {
+    ICorRuntimeHost* icorRuntimeHostPtr1 = (ICorRuntimeHost*) 0L;
+    int defaultAppdomain;
+    try
+    {
+      Guid riid = <Module>.<CrtImplementationDetails>.FromGUID((_GUID*) &<Module>._GUID_cb2f6722_ab3a_11d2_9c40_00c04fa30a3e);
+      icorRuntimeHostPtr1 = (ICorRuntimeHost*) RuntimeEnvironment.GetRuntimeInterfaceAsIntPtr(<Module>.<CrtImplementationDetails>.FromGUID((_GUID*) &<Module>._GUID_cb2f6723_ab3a_11d2_9c40_00c04fa30a3e), riid).ToPointer();
+      goto label_4;
+    }
+    catch (Exception ex)
+    {
+      defaultAppdomain = Marshal.GetHRForException(ex);
+    }
+    if (defaultAppdomain < 0)
+      goto label_5;
+label_4:
+    // ISSUE: cast to a function pointer type
+    // ISSUE: function pointer call
+    defaultAppdomain = __calli((__FnPtr<int (IntPtr, IUnknown**)>) *(long*) (*(long*) icorRuntimeHostPtr1 + 104L))((IUnknown**) icorRuntimeHostPtr1, (IntPtr) ppUnk);
+    ICorRuntimeHost* icorRuntimeHostPtr2 = icorRuntimeHostPtr1;
+    // ISSUE: cast to a function pointer type
+    // ISSUE: function pointer call
+    int num = (int) __calli((__FnPtr<uint (IntPtr)>) *(long*) (*(long*) icorRuntimeHostPtr2 + 16L))((IntPtr) icorRuntimeHostPtr2);
+label_5:
+    return defaultAppdomain;
+  }
+
+  internal static unsafe void __release_appdomain(IUnknown* ppUnk)
+  {
+    IUnknown* iunknownPtr = ppUnk;
+    // ISSUE: cast to a function pointer type
+    // ISSUE: function pointer call
+    int num = (int) __calli((__FnPtr<uint (IntPtr)>) *(long*) (*(long*) iunknownPtr + 16L))((IntPtr) iunknownPtr);
+  }
+
+  [SecurityCritical]
+  internal static unsafe AppDomain <CrtImplementationDetails>.GetDefaultDomain()
+  {
+    IUnknown* ppUnk = (IUnknown*) 0L;
+    int defaultAppdomain = <Module>.__get_default_appdomain(&ppUnk);
+    if (defaultAppdomain >= 0)
+    {
+      try
+      {
+        return (AppDomain) Marshal.GetObjectForIUnknown(new IntPtr((void*) ppUnk));
+      }
+      finally
+      {
+        <Module>.__release_appdomain(ppUnk);
+      }
+    }
+    else
+    {
+      Marshal.ThrowExceptionForHR(defaultAppdomain);
+      return (AppDomain) null;
+    }
+  }
+
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.DoCallBackInDefaultDomain(
+    __FnPtr<int (void*)> function,
+    void* cookie)
+  {
+    Guid riid = <Module>.<CrtImplementationDetails>.FromGUID((_GUID*) &<Module>._GUID_90f1a06c_7712_4762_86b5_7a5eba6bdb02);
+    ICLRRuntimeHost* pointer = (ICLRRuntimeHost*) RuntimeEnvironment.GetRuntimeInterfaceAsIntPtr(<Module>.<CrtImplementationDetails>.FromGUID((_GUID*) &<Module>._GUID_90f1a06e_7712_4762_86b5_7a5eba6bdb02), riid).ToPointer();
+    try
+    {
+      AppDomain defaultDomain = <Module>.<CrtImplementationDetails>.GetDefaultDomain();
+      long num1 = *(long*) (*(long*) pointer + 64L);
+      uint id = (uint) defaultDomain.Id;
+      ICLRRuntimeHost* iclrRuntimeHostPtr = pointer;
+      int num2 = (int) id;
+      __FnPtr<int (void*)> local = function;
+      void* voidPtr = cookie;
+      // ISSUE: cast to a function pointer type
+      // ISSUE: cast to a function pointer type
+      // ISSUE: function pointer call
+      int errorCode = __calli((__FnPtr<int (IntPtr, uint, __FnPtr<int (void*)>, void*)>) num1)((void*) iclrRuntimeHostPtr, (__FnPtr<int (void*)>) num2, (uint) local, (IntPtr) voidPtr);
+      if (errorCode >= 0)
+        return;
+      Marshal.ThrowExceptionForHR(errorCode);
+    }
+    finally
+    {
+      ICLRRuntimeHost* iclrRuntimeHostPtr = pointer;
+      // ISSUE: cast to a function pointer type
+      // ISSUE: function pointer call
+      int num = (int) __calli((__FnPtr<uint (IntPtr)>) *(long*) (*(long*) iclrRuntimeHostPtr + 16L))((IntPtr) iclrRuntimeHostPtr);
+    }
+  }
+
+  [return: MarshalAs(UnmanagedType.U1)]
+  internal static bool __scrt_is_safe_for_managed_code()
+  {
+    switch (<Module>.__scrt_native_dllmain_reason)
+    {
+      case 0:
+      case 1:
+        return false;
+      default:
+        return true;
+    }
+  }
+
+  [SecuritySafeCritical]
+  internal static unsafe int <CrtImplementationDetails>.DefaultDomain.DoNothing(
+    void* cookie)
+  {
+    GC.KeepAlive((object) int.MaxValue);
+    return 0;
+  }
+
+  [SecuritySafeCritical]
+  [return: MarshalAs(UnmanagedType.U1)]
+  internal static unsafe bool <CrtImplementationDetails>.DefaultDomain.HasPerProcess()
+  {
+    if (<Module>.?hasPerProcess@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A != (TriBool) 2)
+      return <Module>.?hasPerProcess@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A == (TriBool) -1;
+    void** voidPtr = (void**) &<Module>.__xc_mp_a;
+    if (ref <Module>.__xc_mp_a < ref <Module>.__xc_mp_z)
+    {
+      while (*(long*) voidPtr == 0L)
+      {
+        voidPtr += 8L;
+        if ((IntPtr) voidPtr >= ref <Module>.__xc_mp_z)
+          goto label_5;
+      }
+      <Module>.?hasPerProcess@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A = (TriBool) -1;
+      return true;
+    }
+label_5:
+    <Module>.?hasPerProcess@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A = (TriBool) 0;
+    return false;
+  }
+
+  [SecuritySafeCritical]
+  [return: MarshalAs(UnmanagedType.U1)]
+  internal static unsafe bool <CrtImplementationDetails>.DefaultDomain.HasNative()
+  {
+    if (<Module>.?hasNative@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A != (TriBool) 2)
+      return <Module>.?hasNative@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A == (TriBool) -1;
+    void** voidPtr1 = (void**) &<Module>.__xi_a;
+    if (ref <Module>.__xi_a < ref <Module>.__xi_z)
+    {
+      while (*(long*) voidPtr1 == 0L)
+      {
+        voidPtr1 += 8L;
+        if ((IntPtr) voidPtr1 >= ref <Module>.__xi_z)
+          goto label_5;
+      }
+      <Module>.?hasNative@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A = (TriBool) -1;
+      return true;
+    }
+label_5:
+    void** voidPtr2 = (void**) &<Module>.__xc_a;
+    if (ref <Module>.__xc_a < ref <Module>.__xc_z)
+    {
+      while (*(long*) voidPtr2 == 0L)
+      {
+        voidPtr2 += 8L;
+        if ((IntPtr) voidPtr2 >= ref <Module>.__xc_z)
+          goto label_9;
+      }
+      <Module>.?hasNative@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A = (TriBool) -1;
+      return true;
+    }
+label_9:
+    <Module>.?hasNative@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A = (TriBool) 0;
+    return false;
+  }
+
+  [SecuritySafeCritical]
+  [return: MarshalAs(UnmanagedType.U1)]
+  internal static bool <CrtImplementationDetails>.DefaultDomain.NeedsInitialization()
+  {
+    return <Module>.<CrtImplementationDetails>.DefaultDomain.HasPerProcess() && !<Module>.?InitializedPerProcess@DefaultDomain@<CrtImplementationDetails>@@2_NA || <Module>.<CrtImplementationDetails>.DefaultDomain.HasNative() && !<Module>.?InitializedNative@DefaultDomain@<CrtImplementationDetails>@@2_NA && <Module>.__scrt_current_native_startup_state == (__scrt_native_startup_state) 0;
+  }
+
+  [return: MarshalAs(UnmanagedType.U1)]
+  internal static bool <CrtImplementationDetails>.DefaultDomain.NeedsUninitialization()
+  {
+    return <Module>.?Entered@DefaultDomain@<CrtImplementationDetails>@@2_NA;
+  }
+
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.DefaultDomain.Initialize()
+  {
+    // ISSUE: cast to a function pointer type
+    <Module>.<CrtImplementationDetails>.DoCallBackInDefaultDomain((__FnPtr<int (void*)>) (IntPtr) <Module>.__unep@?DoNothing@DefaultDomain@<CrtImplementationDetails>@@$$FCAJPEAX@Z, (void*) 0L);
+  }
+
+  internal static void ?A0xeb4f7d22.??__E?Initialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA@@YMXXZ()
+  {
+    <Module>.?Initialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA = 0;
+  }
+
+  internal static void ?A0xeb4f7d22.??__E?Uninitialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA@@YMXXZ()
+  {
+    <Module>.?Uninitialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA = 0;
+  }
+
+  internal static void ?A0xeb4f7d22.??__E?IsDefaultDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2_NA@@YMXXZ()
+  {
+    <Module>.?IsDefaultDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2_NA = false;
+  }
+
+  internal static void ?A0xeb4f7d22.??__E?InitializedVtables@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A@@YMXXZ()
+  {
+    <Module>.?InitializedVtables@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 0;
+  }
+
+  internal static void ?A0xeb4f7d22.??__E?InitializedNative@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A@@YMXXZ()
+  {
+    <Module>.?InitializedNative@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 0;
+  }
+
+  internal static void ?A0xeb4f7d22.??__E?InitializedPerProcess@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A@@YMXXZ()
+  {
+    <Module>.?InitializedPerProcess@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 0;
+  }
+
+  internal static void ?A0xeb4f7d22.??__E?InitializedPerAppDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A@@YMXXZ()
+  {
+    <Module>.?InitializedPerAppDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 0;
+  }
+
+  [SecuritySafeCritical]
+  [DebuggerStepThrough]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.InitializeVtables(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.gcroot<System::String ^>.=((gcroot<System::String ^>*) obj0, "The C++ module failed to load during vtable initialization.%n");
+    <Module>.?InitializedVtables@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 1;
+    <Module>._initterm_m((__FnPtr<void* ()>*) &<Module>.__xi_vt_a, (__FnPtr<void* ()>*) &<Module>.__xi_vt_z);
+    <Module>.?InitializedVtables@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 2;
+  }
+
+  [SecuritySafeCritical]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.InitializeDefaultAppDomain(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.gcroot<System::String ^>.=((gcroot<System::String ^>*) obj0, "The C++ module failed to load while attempting to initialize the default appdomain.%n");
+    <Module>.<CrtImplementationDetails>.DefaultDomain.Initialize();
+  }
+
+  [SecuritySafeCritical]
+  [DebuggerStepThrough]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.InitializeNative(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.gcroot<System::String ^>.=((gcroot<System::String ^>*) obj0, "The C++ module failed to load during native initialization.%n");
+    <Module>.__security_init_cookie();
+    <Module>.?InitializedNative@DefaultDomain@<CrtImplementationDetails>@@2_NA = true;
+    if (!<Module>.__scrt_is_safe_for_managed_code())
+      <Module>.abort();
+    if (<Module>.__scrt_current_native_startup_state == (__scrt_native_startup_state) 1)
+      <Module>.abort();
+    if (<Module>.__scrt_current_native_startup_state != (__scrt_native_startup_state) 0)
+      return;
+    <Module>.?InitializedNative@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 1;
+    <Module>.__scrt_current_native_startup_state = (__scrt_native_startup_state) 1;
+    if (<Module>._initterm_e((__FnPtr<int ()>*) &<Module>.__xi_a, (__FnPtr<int ()>*) &<Module>.__xi_z) != 0)
+      <Module>.<CrtImplementationDetails>.ThrowModuleLoadException(<Module>.gcroot<System::String ^>..PE$AAVString@System@@((gcroot<System::String ^>*) obj0));
+    <Module>._initterm((__FnPtr<void ()>*) &<Module>.__xc_a, (__FnPtr<void ()>*) &<Module>.__xc_z);
+    <Module>.__scrt_current_native_startup_state = (__scrt_native_startup_state) 2;
+    <Module>.?InitializedNativeFromCCTOR@DefaultDomain@<CrtImplementationDetails>@@2_NA = true;
+    <Module>.?InitializedNative@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 2;
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.InitializePerProcess(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.gcroot<System::String ^>.=((gcroot<System::String ^>*) obj0, "The C++ module failed to load during process initialization.%n");
+    <Module>.?InitializedPerProcess@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 1;
+    <Module>._initatexit_m();
+    <Module>._initterm_m((__FnPtr<void* ()>*) &<Module>.__xc_mp_a, (__FnPtr<void* ()>*) &<Module>.__xc_mp_z);
+    <Module>.?InitializedPerProcess@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 2;
+    <Module>.?InitializedPerProcess@DefaultDomain@<CrtImplementationDetails>@@2_NA = true;
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.InitializePerAppDomain(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.gcroot<System::String ^>.=((gcroot<System::String ^>*) obj0, "The C++ module failed to load during appdomain initialization.%n");
+    <Module>.?InitializedPerAppDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 1;
+    <Module>._initatexit_app_domain();
+    <Module>._initterm_m((__FnPtr<void* ()>*) &<Module>.__xc_ma_a, (__FnPtr<void* ()>*) &<Module>.__xc_ma_z);
+    <Module>.?InitializedPerAppDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 2;
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.InitializeUninitializer(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.gcroot<System::String ^>.=((gcroot<System::String ^>*) obj0, "The C++ module failed to load during registration for the unload events.%n");
+    <Module>.<CrtImplementationDetails>.RegisterModuleUninitializer(new EventHandler(<Module>.<CrtImplementationDetails>.LanguageSupport.DomainUnload));
+  }
+
+  [DebuggerStepThrough]
+  [ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)]
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport._Initialize(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.?IsDefaultDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2_NA = AppDomain.CurrentDomain.IsDefaultAppDomain();
+    <Module>.?Entered@DefaultDomain@<CrtImplementationDetails>@@2_NA = <Module>.?IsDefaultDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2_NA || <Module>.?Entered@DefaultDomain@<CrtImplementationDetails>@@2_NA;
+    void* fiberPtrId = <Module>._getFiberPtrId();
+    int num1 = 0;
+    int num2 = 0;
+    int num3 = 0;
+    RuntimeHelpers.PrepareConstrainedRegions();
+    try
+    {
+      while (num2 == 0)
+      {
+        try
+        {
+        }
+        finally
+        {
+          // ISSUE: cast to a reference type
+          void* voidPtr = (void*) Interlocked.CompareExchange((long&) ref <Module>.__scrt_native_startup_lock, (long) fiberPtrId, 0L);
+          if ((IntPtr) voidPtr == IntPtr.Zero)
+            num2 = 1;
+          else if (voidPtr == fiberPtrId)
+          {
+            num1 = 1;
+            num2 = 1;
+          }
+        }
+        if (num2 == 0)
+          <Module>.Sleep(1000U);
+      }
+      <Module>.<CrtImplementationDetails>.LanguageSupport.InitializeVtables(obj0);
+      if (<Module>.?IsDefaultDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2_NA)
+      {
+        <Module>.<CrtImplementationDetails>.LanguageSupport.InitializeNative(obj0);
+        <Module>.<CrtImplementationDetails>.LanguageSupport.InitializePerProcess(obj0);
+      }
+      else
+        num3 = <Module>.<CrtImplementationDetails>.DefaultDomain.NeedsInitialization() ? 1 : num3;
+    }
+    finally
+    {
+      if (num1 == 0)
+      {
+        // ISSUE: cast to a reference type
+        Interlocked.Exchange((long&) ref <Module>.__scrt_native_startup_lock, 0L);
+      }
+    }
+    if (num3 != 0)
+      <Module>.<CrtImplementationDetails>.LanguageSupport.InitializeDefaultAppDomain(obj0);
+    <Module>.<CrtImplementationDetails>.LanguageSupport.InitializePerAppDomain(obj0);
+    <Module>.?Initialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA = 1;
+    <Module>.<CrtImplementationDetails>.LanguageSupport.InitializeUninitializer(obj0);
+  }
+
+  [SecurityCritical]
+  internal static void <CrtImplementationDetails>.LanguageSupport.UninitializeAppDomain()
+  {
+    <Module>._app_exit_callback();
+  }
+
+  [SecurityCritical]
+  internal static unsafe int <CrtImplementationDetails>.LanguageSupport._UninitializeDefaultDomain(
+    void* cookie)
+  {
+    <Module>._exit_callback();
+    <Module>.?InitializedPerProcess@DefaultDomain@<CrtImplementationDetails>@@2_NA = false;
+    if (<Module>.?InitializedNativeFromCCTOR@DefaultDomain@<CrtImplementationDetails>@@2_NA)
+    {
+      <Module>._cexit();
+      <Module>.__scrt_current_native_startup_state = (__scrt_native_startup_state) 0;
+      <Module>.?InitializedNativeFromCCTOR@DefaultDomain@<CrtImplementationDetails>@@2_NA = false;
+    }
+    <Module>.?InitializedNative@DefaultDomain@<CrtImplementationDetails>@@2_NA = false;
+    return 0;
+  }
+
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.UninitializeDefaultDomain()
+  {
+    if (!<Module>.<CrtImplementationDetails>.DefaultDomain.NeedsUninitialization())
+      return;
+    if (AppDomain.CurrentDomain.IsDefaultAppDomain())
+    {
+      <Module>.<CrtImplementationDetails>.LanguageSupport._UninitializeDefaultDomain((void*) 0L);
+    }
+    else
+    {
+      // ISSUE: cast to a function pointer type
+      <Module>.<CrtImplementationDetails>.DoCallBackInDefaultDomain((__FnPtr<int (void*)>) (IntPtr) <Module>.__unep@?_UninitializeDefaultDomain@LanguageSupport@<CrtImplementationDetails>@@$$FCAJPEAX@Z, (void*) 0L);
+    }
+  }
+
+  [ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)]
+  [SecurityCritical]
+  [PrePrepareMethod]
+  internal static void <CrtImplementationDetails>.LanguageSupport.DomainUnload(
+    object A_0,
+    EventArgs A_1)
+  {
+    if (<Module>.?Initialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA == 0 || Interlocked.Exchange(ref <Module>.?Uninitialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA, 1) != 0)
+      return;
+    int num = Interlocked.Decrement(ref <Module>.?Count@AllDomains@<CrtImplementationDetails>@@2HA) == 0 ? 1 : 0;
+    <Module>.<CrtImplementationDetails>.LanguageSupport.UninitializeAppDomain();
+    if ((byte) num == (byte) 0)
+      return;
+    <Module>.<CrtImplementationDetails>.LanguageSupport.UninitializeDefaultDomain();
+  }
+
+  [ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)]
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.Cleanup(
+    [In] LanguageSupport* obj0,
+    Exception innerException)
+  {
+    try
+    {
+      bool flag = Interlocked.Decrement(ref <Module>.?Count@AllDomains@<CrtImplementationDetails>@@2HA) == 0;
+      <Module>.<CrtImplementationDetails>.LanguageSupport.UninitializeAppDomain();
+      if (!flag)
+        return;
+      <Module>.<CrtImplementationDetails>.LanguageSupport.UninitializeDefaultDomain();
+    }
+    catch (Exception ex)
+    {
+      <Module>.<CrtImplementationDetails>.ThrowNestedModuleLoadException(innerException, ex);
+    }
+    catch
+    {
+      <Module>.<CrtImplementationDetails>.ThrowNestedModuleLoadException(innerException, (Exception) null);
+    }
+  }
+
+  [SecurityCritical]
+  internal static unsafe LanguageSupport* <CrtImplementationDetails>.LanguageSupport.{ctor}(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.gcroot<System::String ^>.{ctor}((gcroot<System::String ^>*) obj0);
+    return obj0;
+  }
+
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.{dtor}(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.gcroot<System::String ^>.{dtor}((gcroot<System::String ^>*) obj0);
+  }
+
+  [DebuggerStepThrough]
+  [ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)]
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.Initialize(
+    [In] LanguageSupport* obj0)
+  {
+    bool flag = false;
+    RuntimeHelpers.PrepareConstrainedRegions();
+    try
+    {
+      <Module>.gcroot<System::String ^>.=((gcroot<System::String ^>*) obj0, "The C++ module failed to load.%n");
+      RuntimeHelpers.PrepareConstrainedRegions();
+      try
+      {
+      }
+      finally
+      {
+        Interlocked.Increment(ref <Module>.?Count@AllDomains@<CrtImplementationDetails>@@2HA);
+        flag = true;
+      }
+      <Module>.<CrtImplementationDetails>.LanguageSupport._Initialize(obj0);
+    }
+    catch (Exception ex)
+    {
+      if (flag)
+        <Module>.<CrtImplementationDetails>.LanguageSupport.Cleanup(obj0, ex);
+      <Module>.<CrtImplementationDetails>.ThrowModuleLoadException(<Module>.gcroot<System::String ^>..PE$AAVString@System@@((gcroot<System::String ^>*) obj0), ex);
+    }
+    catch
+    {
+      if (flag)
+        <Module>.<CrtImplementationDetails>.LanguageSupport.Cleanup(obj0, (Exception) null);
+      <Module>.<CrtImplementationDetails>.ThrowModuleLoadException(<Module>.gcroot<System::String ^>..PE$AAVString@System@@((gcroot<System::String ^>*) obj0), (Exception) null);
+    }
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  static unsafe <Module>()
+  {
+    LanguageSupport languageSupport;
+    <Module>.<CrtImplementationDetails>.LanguageSupport.{ctor}(&languageSupport);
+    // ISSUE: fault handler
+    try
+    {
+      <Module>.<CrtImplementationDetails>.LanguageSupport.Initialize(&languageSupport);
+    }
+    __fault
+    {
+      // ISSUE: method pointer
+      // ISSUE: cast to a function pointer type
+      <Module>.___CxxCallUnwindDtor((__FnPtr<void (void*)>) __methodptr(<CrtImplementationDetails>.LanguageSupport.{dtor}), (void*) &languageSupport);
+    }
+    <Module>.<CrtImplementationDetails>.LanguageSupport.{dtor}(&languageSupport);
+  }
+
+  [SecuritySafeCritical]
+  internal static unsafe string gcroot<System::String ^>..PE$AAVString@System@@(
+    [In] gcroot<System::String ^>* obj0)
+  {
+    return (string) ((GCHandle) new IntPtr((void*) *(long*) obj0)).Target;
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static unsafe gcroot<System::String ^>* gcroot<System::String ^>.=(
+    [In] gcroot<System::String ^>* obj0,
+    string t)
+  {
+    ((GCHandle) new IntPtr((void*) *(long*) obj0)).Target = (object) t;
+    return obj0;
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static unsafe void gcroot<System::String ^>.{dtor}(
+    [In] gcroot<System::String ^>* obj0)
+  {
+    ((GCHandle) new IntPtr((void*) *(long*) obj0)).Free();
+    *(long*) obj0 = 0L;
+  }
+
+  [DebuggerStepThrough]
+  [SecuritySafeCritical]
+  internal static unsafe gcroot<System::String ^>* gcroot<System::String ^>.{ctor}(
+    [In] gcroot<System::String ^>* obj0)
+  {
+    IntPtr num = (IntPtr) GCHandle.Alloc((object) null);
+    *(long*) obj0 = (long) num.ToPointer();
+    return obj0;
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static unsafe ValueType <CrtImplementationDetails>.AtExitLock._handle()
+  {
+    return (IntPtr) <Module>.?_lock@AtExitLock@<CrtImplementationDetails>@@$$Q0PEAXEA != IntPtr.Zero ? (ValueType) GCHandle.FromIntPtr(new IntPtr(<Module>.?_lock@AtExitLock@<CrtImplementationDetails>@@$$Q0PEAXEA)) : (ValueType) null;
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.AtExitLock._lock_Construct(
+    object value)
+  {
+    <Module>.?_lock@AtExitLock@<CrtImplementationDetails>@@$$Q0PEAXEA = (void*) 0L;
+    <Module>.<CrtImplementationDetails>.AtExitLock._lock_Set(value);
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.AtExitLock._lock_Set(
+    object value)
+  {
+    ValueType valueType = <Module>.<CrtImplementationDetails>.AtExitLock._handle();
+    if (valueType == null)
+      <Module>.?_lock@AtExitLock@<CrtImplementationDetails>@@$$Q0PEAXEA = GCHandle.ToIntPtr(GCHandle.Alloc(value)).ToPointer();
+    else
+      ((GCHandle) valueType).Target = value;
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static object <CrtImplementationDetails>.AtExitLock._lock_Get()
+  {
+    ValueType valueType = <Module>.<CrtImplementationDetails>.AtExitLock._handle();
+    return valueType != null ? ((GCHandle) valueType).Target : (object) null;
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.AtExitLock._lock_Destruct()
+  {
+    ValueType valueType = <Module>.<CrtImplementationDetails>.AtExitLock._handle();
+    if (valueType == null)
+      return;
+    ((GCHandle) valueType).Free();
+    <Module>.?_lock@AtExitLock@<CrtImplementationDetails>@@$$Q0PEAXEA = (void*) 0L;
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  [return: MarshalAs(UnmanagedType.U1)]
+  internal static bool <CrtImplementationDetails>.AtExitLock.IsInitialized()
+  {
+    return <Module>.<CrtImplementationDetails>.AtExitLock._lock_Get() != null;
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static void <CrtImplementationDetails>.AtExitLock.AddRef()
+  {
+    if (!<Module>.<CrtImplementationDetails>.AtExitLock.IsInitialized())
+    {
+      <Module>.<CrtImplementationDetails>.AtExitLock._lock_Construct(new object());
+      <Module>.?_ref_count@AtExitLock@<CrtImplementationDetails>@@$$Q0HA = 0;
+    }
+    ++<Module>.?_ref_count@AtExitLock@<CrtImplementationDetails>@@$$Q0HA;
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static void <CrtImplementationDetails>.AtExitLock.RemoveRef()
+  {
+    <Module>.?_ref_count@AtExitLock@<CrtImplementationDetails>@@$$Q0HA += -1;
+    if (<Module>.?_ref_count@AtExitLock@<CrtImplementationDetails>@@$$Q0HA != 0)
+      return;
+    <Module>.<CrtImplementationDetails>.AtExitLock._lock_Destruct();
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  [return: MarshalAs(UnmanagedType.U1)]
+  internal static bool ?A0xdf32f105.__alloc_global_lock()
+  {
+    <Module>.<CrtImplementationDetails>.AtExitLock.AddRef();
+    return <Module>.<CrtImplementationDetails>.AtExitLock.IsInitialized();
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static void ?A0xdf32f105.__dealloc_global_lock()
+  {
+    <Module>.<CrtImplementationDetails>.AtExitLock.RemoveRef();
+  }
+
+  [SecurityCritical]
+  internal static unsafe void _exit_callback()
+  {
+    if (<Module>.?A0xdf32f105.__exit_list_size == 0UL)
+      return;
+    __FnPtr<void ()>* local1 = (__FnPtr<void ()>*) <Module>.DecodePointer((void*) <Module>.?A0xdf32f105.__onexitbegin_m);
+    __FnPtr<void ()>* local2 = (__FnPtr<void ()>*) <Module>.DecodePointer((void*) <Module>.?A0xdf32f105.__onexitend_m);
+    if ((IntPtr) local1 != -1L && (IntPtr) local1 != IntPtr.Zero && (IntPtr) local2 != IntPtr.Zero)
+    {
+      __FnPtr<void ()>* local3 = local1;
+      __FnPtr<void ()>* local4 = local2;
+      while (true)
+      {
+        __FnPtr<void ()>* local5;
+        __FnPtr<void ()>* local6;
+        do
+        {
+          do
+          {
+            local2 -= 8L;
+            if (local2 < local1)
+              goto label_7;
+          }
+          while (*(long*) local2 == (IntPtr) <Module>.EncodePointer((void*) 0L));
+          void* voidPtr = <Module>.DecodePointer((void*) *(long*) local2);
+          *(long*) local2 = (long) <Module>.EncodePointer((void*) 0L);
+          // ISSUE: cast to a function pointer type
+          // ISSUE: function pointer call
+          __calli((__FnPtr<void ()>) (IntPtr) voidPtr)();
+          local5 = (__FnPtr<void ()>*) <Module>.DecodePointer((void*) <Module>.?A0xdf32f105.__onexitbegin_m);
+          local6 = (__FnPtr<void ()>*) <Module>.DecodePointer((void*) <Module>.?A0xdf32f105.__onexitend_m);
+        }
+        while (local3 == local5 && local4 == local6);
+        local3 = local5;
+        local1 = local5;
+        local4 = local6;
+        local2 = local6;
+      }
+label_7:
+      Marshal.FreeHGlobal(new IntPtr((void*) local1));
+    }
+    <Module>.?A0xdf32f105.__dealloc_global_lock();
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static unsafe int _initatexit_m()
+  {
+    if (!<Module>.?A0xdf32f105.__alloc_global_lock())
+      return 0;
+    <Module>.?A0xdf32f105.__onexitbegin_m = (__FnPtr<void ()>*) <Module>.EncodePointer(Marshal.AllocHGlobal(256).ToPointer());
+    <Module>.?A0xdf32f105.__onexitend_m = <Module>.?A0xdf32f105.__onexitbegin_m;
+    <Module>.?A0xdf32f105.__exit_list_size = 32UL;
+    return 1;
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static unsafe int _initatexit_app_domain()
+  {
+    if (<Module>.?A0xdf32f105.__alloc_global_lock())
+    {
+      <Module>.__onexitbegin_app_domain = (__FnPtr<void ()>*) <Module>.EncodePointer(Marshal.AllocHGlobal(256).ToPointer());
+      <Module>.__onexitend_app_domain = <Module>.__onexitbegin_app_domain;
+      <Module>.__exit_list_size_app_domain = 32UL;
+    }
+    return 1;
+  }
+
+  [SecurityCritical]
+  [HandleProcessCorruptedStateExceptions]
+  internal static unsafe void _app_exit_callback()
+  {
+    if (<Module>.__exit_list_size_app_domain == 0UL)
+      return;
+    __FnPtr<void ()>* local1 = (__FnPtr<void ()>*) <Module>.DecodePointer((void*) <Module>.__onexitbegin_app_domain);
+    __FnPtr<void ()>* local2 = (__FnPtr<void ()>*) <Module>.DecodePointer((void*) <Module>.__onexitend_app_domain);
+    try
+    {
+      if ((IntPtr) local1 == -1L || (IntPtr) local1 == IntPtr.Zero || (IntPtr) local2 == IntPtr.Zero)
+        return;
+      __FnPtr<void ()>* local3 = local1;
+      __FnPtr<void ()>* local4 = local2;
+      while (true)
+      {
+        __FnPtr<void ()>* local5;
+        __FnPtr<void ()>* local6;
+        do
+        {
+          do
+          {
+            local2 -= 8L;
+          }
+          while (local2 >= local1 && *(long*) local2 == (IntPtr) <Module>.EncodePointer((void*) 0L));
+          if (local2 >= local1)
+          {
+            // ISSUE: cast to a function pointer type
+            __FnPtr<void ()> local7 = (__FnPtr<void ()>) (IntPtr) <Module>.DecodePointer((void*) *(long*) local2);
+            *(long*) local2 = (long) <Module>.EncodePointer((void*) 0L);
+            // ISSUE: function pointer call
+            __calli(local7)();
+            local5 = (__FnPtr<void ()>*) <Module>.DecodePointer((void*) <Module>.__onexitbegin_app_domain);
+            local6 = (__FnPtr<void ()>*) <Module>.DecodePointer((void*) <Module>.__onexitend_app_domain);
+          }
+          else
+            goto label_12;
+        }
+        while (local3 == local5 && local4 == local6);
+        local3 = local5;
+        local1 = local5;
+        local4 = local6;
+        local2 = local6;
+      }
+label_12:;
+    }
+    finally
+    {
+      Marshal.FreeHGlobal(new IntPtr((void*) local1));
+      <Module>.?A0xdf32f105.__dealloc_global_lock();
+    }
+  }
+
+  [SecurityCritical]
+  [ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)]
+  [SuppressUnmanagedCodeSecurity]
+  [DllImport("KERNEL32.dll")]
+  public static extern unsafe void* DecodePointer(void* _Ptr);
+
+  [ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)]
+  [SecurityCritical]
+  [SuppressUnmanagedCodeSecurity]
+  [DllImport("KERNEL32.dll")]
+  public static extern unsafe void* EncodePointer(void* _Ptr);
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static unsafe int _initterm_e(__FnPtr<int ()>* pfbegin, __FnPtr<int ()>* pfend)
+  {
+    int num1 = 0;
+    if (pfbegin < pfend)
+    {
+      while (num1 == 0)
+      {
+        ulong num2 = (ulong) *(long*) pfbegin;
+        if (num2 != 0UL)
+        {
+          // ISSUE: cast to a function pointer type
+          // ISSUE: function pointer call
+          num1 = __calli((__FnPtr<int ()>) (long) num2)();
+        }
+        pfbegin += 8L;
+        if (pfbegin >= pfend)
+          break;
+      }
+    }
+    return num1;
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static unsafe void _initterm(__FnPtr<void ()>* pfbegin, __FnPtr<void ()>* pfend)
+  {
+    if (pfbegin >= pfend)
+      return;
+    do
+    {
+      ulong num = (ulong) *(long*) pfbegin;
+      if (num != 0UL)
+      {
+        // ISSUE: cast to a function pointer type
+        // ISSUE: function pointer call
+        __calli((__FnPtr<void ()>) (long) num)();
+      }
+      pfbegin += 8L;
+    }
+    while (pfbegin < pfend);
+  }
+
+  [DebuggerStepThrough]
+  internal static ModuleHandle <CrtImplementationDetails>.ThisModule.Handle()
+  {
+    return typeof (ThisModule).Module.ModuleHandle;
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  [SecurityPermission(SecurityAction.Assert, UnmanagedCode = true)]
+  internal static unsafe void _initterm_m(__FnPtr<void* ()>* pfbegin, __FnPtr<void* ()>* pfend)
+  {
+    if (pfbegin >= pfend)
+      return;
+    do
+    {
+      ulong methodToken = (ulong) *(long*) pfbegin;
+      if (methodToken != 0UL)
+      {
+        // ISSUE: cast to a function pointer type
+        // ISSUE: function pointer call
+        void* voidPtr = __calli(<Module>.<CrtImplementationDetails>.ThisModule.ResolveMethod<void const * __clrcall(void)>((__FnPtr<void* ()>) (long) methodToken))();
+      }
+      pfbegin += 8L;
+    }
+    while (pfbegin < pfend);
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static unsafe __FnPtr<void* ()> <CrtImplementationDetails>.ThisModule.ResolveMethod<void const * __clrcall(void)>(
+    __FnPtr<void* ()> methodToken)
+  {
+    // ISSUE: cast to a function pointer type
+    return (__FnPtr<void* ()>) (IntPtr) <Module>.<CrtImplementationDetails>.ThisModule.Handle().ResolveMethodHandle((int) methodToken).GetFunctionPointer().ToPointer();
+  }
+
+  [SecurityCritical]
+  [HandleProcessCorruptedStateExceptions]
+  [ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)]
+  [SecurityPermission(SecurityAction.Assert, UnmanagedCode = true)]
+  internal static unsafe void ___CxxCallUnwindDtor(__FnPtr<void (void*)> pDtor, void* pThis)
+  {
+    try
+    {
+      // ISSUE: function pointer call
+      __calli(pDtor)(pThis);
+    }
+    catch (Exception ex) when (<Module>.__FrameUnwindFilter((_EXCEPTION_POINTERS*) Marshal.GetExceptionPointers()) != 0)
+    {
+    }
+  }
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern uint WinMainCRTStartup();
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern unsafe int IsValidApp([In] int obj0, [In] void* obj1);
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern unsafe int ModifyApp([In] int obj0, [In] void* obj1, [MarshalAs(UnmanagedType.U1)] bool _param2, [MarshalAs(UnmanagedType.U1)] bool _param3);
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern void ChangePatchValues([In] long obj0, [In] long obj1, [In] long obj2, [In] long obj3);
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern int LaunchApp();
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern unsafe long TryFindValue([In] int* obj0);
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern unsafe int SetDataSource([In] int obj0, [In] void* obj1, [In] int obj2);
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern int EnableDebugPriv();
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern void IsBetaEditionTarget([MarshalAs(UnmanagedType.U1)] bool _param0);
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern unsafe void* _getFiberPtrId();
+
+  [SuppressUnmanagedCodeSecurity]
+  [DllImport("", EntryPoint = "", CallingConvention = CallingConvention.Cdecl, SetLastError = true)]
+  [MethodImpl(MethodImplOptions.Unmanaged, MethodCodeType = MethodCodeType.Native)]
+  internal static extern void _cexit();
+
+  [SuppressUnmanagedCodeSecurity]
+  [DllImport("", EntryPoint = "", CallingConvention = CallingConvention.Cdecl, SetLastError = true)]
+  [MethodImpl(MethodImplOptions.Unmanaged, MethodCodeType = MethodCodeType.Native)]
+  internal static extern void Sleep([In] uint obj0);
+
+  [SuppressUnmanagedCodeSecurity]
+  [DllImport("", EntryPoint = "", CallingConvention = CallingConvention.Cdecl, SetLastError = true)]
+  [MethodImpl(MethodImplOptions.Unmanaged, MethodCodeType = MethodCodeType.Native)]
+  internal static extern void abort();
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern void __security_init_cookie();
+
+  [SuppressUnmanagedCodeSecurity]
+  [DllImport("", EntryPoint = "", CallingConvention = CallingConvention.Cdecl, SetLastError = true)]
+  [MethodImpl(MethodImplOptions.Unmanaged, MethodCodeType = MethodCodeType.Native)]
+  internal static extern unsafe int __FrameUnwindFilter([In] _EXCEPTION_POINTERS* obj0);
+}
+```
+--------------------------------------------------
+
+File: _EXCEPTION_POINTERS.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+[NativeCppClass]
+[StructLayout(LayoutKind.Sequential, Size = 16)]
+internal struct _EXCEPTION_POINTERS
+{
+  private long <alignment member>;
+}
+
+```
+--------------------------------------------------
+
+File: _GUID.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+[UnsafeValueType]
+[NativeCppClass]
+[StructLayout(LayoutKind.Sequential, Size = 16)]
+internal struct _GUID
+{
+  private int <alignment member>;
+}
+
+```
+--------------------------------------------------
+
+File: __scrt_native_startup_state.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+
+#nullable disable
+[NativeCppClass]
+internal enum __scrt_native_startup_state
+{
+}
+
+```
+--------------------------------------------------
+
+File: __s_GUID.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+[NativeCppClass]
+[UnsafeValueType]
+[StructLayout(LayoutKind.Sequential, Size = 16)]
+internal struct __s_GUID
+{
+  private int <alignment member>;
+}
+
+```
+--------------------------------------------------
+
+File: .github\workflows\dotnet-desktop.yml
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: .vs\akshnav\FileContentIndex\00de8fb2-ac23-4bc2-9a1b-7d09ba22f68a.vsidx
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: .vs\akshnav\FileContentIndex\9bfbf021-d473-43da-be4b-f3d7e5d84a33.vsidx
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: .vs\akshnav\v17\.suo
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: .vs\akshnav\v17\DocumentLayout.backup.json
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: .vs\akshnav\v17\DocumentLayout.json
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: Backup\akshnav.csproj
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> <!-- TODO: Upgrade -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{665C2870-4EDA-4BF7-9C5C-070D5D5FBBE7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>MCenters</AssemblyName>
+    <ApplicationVersion>1.0.0.2</ApplicationVersion>
+    <OutputType>exe</OutputType> <!-- TODO: Check if this is correct -->
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="Microsoft.NETFramework.ReferenceAssemblies" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="_003CModule_003E.cs" />
+    <Compile Include="__scrt_native_startup_state.cs" />
+    <Compile Include="_GUID.cs" />
+    <Compile Include="IUnknown.cs" />
+    <Compile Include="gcroot_003CSystem_003A_003AString ^_003E.cs" />
+    <Compile Include="__s_GUID.cs" />
+    <Compile Include="ICLRRuntimeHost.cs" />
+    <Compile Include="ICorRuntimeHost.cs" />
+    <Compile Include="_EXCEPTION_POINTERS.cs" />
+    <Compile Include="_003CCrtImplementationDetails_003E\ModuleLoadException.cs" />
+    <Compile Include="_003CCrtImplementationDetails_003E\ModuleLoadExceptionHandlerException.cs" />
+    <Compile Include="_003CCrtImplementationDetails_003E\ModuleUninitializer.cs" />
+    <Compile Include="_003CCrtImplementationDetails_003E\TriBool.cs" />
+    <Compile Include="_003CCrtImplementationDetails_003E\Progress.cs" />
+    <Compile Include="_003CCrtImplementationDetails_003E\LanguageSupport.cs" />
+    <Compile Include="_003CCrtImplementationDetails_003E\ThisModule.cs" />
+    <Compile Include="_003CCppImplementationDetails_003E\$ArrayType$$$BY0A@P6AHXZ.cs" />
+    <Compile Include="_003CCppImplementationDetails_003E\$ArrayType$$$BY00Q6MPEBXXZ.cs" />
+    <Compile Include="_003CCppImplementationDetails_003E\$ArrayType$$$BY0A@P6AXXZ.cs" />
+    <Compile Include="M_Centers\MainWindow.cs" />
+    <Compile Include="M_Centers\App.cs" />
+    <Compile Include="mcenters\SerializeDeserialize`1.cs" />
+    <Compile Include="mcenters\Settings.cs" />
+    <Compile Include="mcenters\Logger.cs" />
+    <Compile Include="mcenters\Patch.cs" />
+    <Compile Include="mcenters\API.cs" />
+    <Compile Include="mcenters\PrepareResults.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="mainwindow.xaml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
+
+```
+--------------------------------------------------
+
+File: Backup\akshnav.sln
+Guessed Purpose: Unknown purpose
+Content:
+```
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCenters", "akshnav.csproj", "{665C2870-4EDA-4BF7-9C5C-070D5D5FBBE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{665C2870-4EDA-4BF7-9C5C-070D5D5FBBE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{665C2870-4EDA-4BF7-9C5C-070D5D5FBBE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{665C2870-4EDA-4BF7-9C5C-070D5D5FBBE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{665C2870-4EDA-4BF7-9C5C-070D5D5FBBE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
+
+```
+--------------------------------------------------
+
+File: Backup\AssemblyInfo.cs
+Guessed Purpose: Assembly metadata (version, etc.)
+Content:
+```
+﻿using System.Reflection;
+using System.Security;
+using System.Security.Permissions;
+
+[assembly: SecurityRules(SecurityRuleSet.Level1)]
+[assembly: AssemblyVersion("0.0.0.0")]
+[assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
+
+```
+--------------------------------------------------
+
+File: Backup\gcroot_003CSystem_003A_003AString ^_003E.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+[NativeCppClass]
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+internal struct gcroot<System::String ^>
+{
+  private long <alignment member>;
+}
+
+```
+--------------------------------------------------
+
+File: Backup\ICLRRuntimeHost.cs
+Guessed Purpose: CLR hosting for C++ interop
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+[NativeCppClass]
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+internal struct ICLRRuntimeHost
+{
+  private long <alignment member>;
+}
+
+```
+--------------------------------------------------
+
+File: Backup\ICorRuntimeHost.cs
+Guessed Purpose: CLR hosting for C++ interop
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+[NativeCppClass]
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+internal struct ICorRuntimeHost
+{
+  private long <alignment member>;
+}
+
+```
+--------------------------------------------------
+
+File: Backup\IUnknown.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+[NativeCppClass]
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+internal struct IUnknown
+{
+  private long <alignment member>;
+}
+
+```
+--------------------------------------------------
+
+File: Backup\mainwindow.xaml
+Guessed Purpose: UI definition or code-behind for the app window
+Content:
+```
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+         Height="584" Width="757"  FontFamily="Arial Black" Foreground="White">
+
+
+    <Grid x:Name="rootGrid">
+        <Rectangle RadiusX="30" RadiusY="30">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FF172446" Opacity="0.98"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Grid x:Name="backgroundGrid" Margin="10,14,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="11*"/>
+                <RowDefinition Height="42*"/>
+                <RowDefinition Height="61*"/>
+                <RowDefinition Height="278*"/>
+                <RowDefinition Height="85*"/>
+                <RowDefinition Height="49*"/>
+                <RowDefinition Height="58*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="106*"/>
+                <ColumnDefinition Width="118*"/>
+                <ColumnDefinition Width="95*"/>
+                <ColumnDefinition Width="28*"/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="5" Grid.RowSpan="2" Grid.Column="2" Margin="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <RadioButton x:Name="minecraftReleaseRadioButton" Content="Minecraft Release" FontSize="15" Margin="22,10,22,10" IsChecked="True" >
+
+                    <RadioButton.Foreground>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FFE0DADA"/>
+                            <GradientStop Color="White" Offset="1"/>
+                            <GradientStop Color="#FFC7B4B4" Offset="0.437"/>
+                        </RadialGradientBrush>
+                    </RadioButton.Foreground>
+                </RadioButton>
+                <RadioButton x:Name="minecraftBetaRadioButton" Grid.Row="1" Content="Minecraft Beta" FontSize="15" Margin="22,10,49,10" >
+
+                    <RadioButton.Foreground>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FFE0DADA"/>
+                            <GradientStop Color="White" Offset="1"/>
+                            <GradientStop Color="#FFC7B4B4" Offset="0.437"/>
+                        </RadialGradientBrush>
+                    </RadioButton.Foreground>
+                </RadioButton>
+            </Grid>
+            
+
+            <Button x:Name="InjectButton" Content="Inject"  Foreground="White" FontWeight="Bold"  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1" FontSize="18">
+                <Button.Background>
+                    <SolidColorBrush Color="#F0302D00" Opacity="0.7"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="ClipSVCButton" Content="Fix ClipSVC"  Foreground="White" FontWeight="Bold"  Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="1" FontSize="18">
+                <Button.Background>
+                    <SolidColorBrush Color="#F0302D00" Opacity="0.7"/>
+                </Button.Background>
+            </Button>
+            <StackPanel Grid.Row="3" Grid.Column="1">
+                <StackPanel.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.3"/>
+                </StackPanel.Background>
+                <CheckBox x:Name="trialBox" Content="Enable Trial"  FontStretch="Medium" FontSize="14"  Grid.Row="3" Grid.Column="1" Foreground="White" VerticalAlignment="Top" Height="15"  />
+            </StackPanel>
+            <TextBlock  TextWrapping="Wrap" Text="Akshnav (Preview)" TextAlignment="Center" FontWeight="Bold" FontSize="36" FontFamily="Arial Black" Grid.Row="2" Grid.ColumnSpan="5" />
+            <TextBlock x:Name="closeButton" TextWrapping="Wrap" Text="X" Background="Red"  TextAlignment="Center" FontWeight="Bold"  FontFamily="Arial Black" FontSize="30"   Grid.Column="3"  Grid.Row="1" FlowDirection="RightToLeft" Padding="0,0,0,5" Grid.ColumnSpan="2" Margin="200,0,0,0" />
+
+            <RichTextBox  x:Name="outputBox" Grid.Column="1" Grid.ColumnSpan="4"  Grid.Row="3"   FontSize="15" FontFamily="Arial"  OpacityMask="#FFF9F4F4" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" IsReadOnly="True" Margin="223,0,0,0">
+                <RichTextBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0.99"/>
+                </RichTextBox.Background>
+            </RichTextBox>
+
+            <Button x:Name="ContactButton" Content="Contact Us"  Foreground="White" FontWeight="Bold" Margin="10,0,10,0" VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="1" FontSize="18">
+                <Button.Background>
+                    <SolidColorBrush Color="#F0302D00" Opacity="0.7"/>
+                </Button.Background>
+            </Button>
+            <TextBlock x:Name="VersionBox" Text="Version 1.0.0" Grid.Column="1" Grid.Row="6" VerticalAlignment="Bottom"/>
+        </Grid>
+
+    </Grid>
+</Page>
+
+```
+--------------------------------------------------
+
+File: Backup\_003CModule_003E.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using <CppImplementationDetails>;
+using <CrtImplementationDetails>;
+using M_Centers;
+using mcenters;
+using System;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System.Runtime.ConstrainedExecution;
+using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices;
+using System.Security;
+using System.Security.Permissions;
+using System.Threading;
+
+#nullable disable
+internal class <Module>
+{
+  public static __FnPtr<void ()> __m2mep@?MainLogic@@$$FYAXXZ;
+  internal static int __@@_PchSym_@00@UkiltiznnrmtUzkkhUhlfixvUivklhUnxvmgvihUivhlfixvhUcGEUmlmLfdkLnlwvUkilxvhhOlyq@4B2008FD98C1DD4;
+  public static __FnPtr<void (char*)> __m2mep@?AddLog@@$$FYAXPEB_W@Z;
+  public static __FnPtr<void (char*, char*)> __m2mep@?AddLog@@$$FYAXPEB_W0@Z;
+  public static __FnPtr<void (char*)> __m2mep@?AddError@@$$FYAXPEB_W@Z;
+  internal static __s_GUID _GUID_cb2f6723_ab3a_11d2_9c40_00c04fa30a3e;
+  internal static __s_GUID _GUID_cb2f6722_ab3a_11d2_9c40_00c04fa30a3e;
+  [FixedAddressValueType]
+  internal static int ?Uninitialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA;
+  internal static __FnPtr<void ()> ?A0xeb4f7d22.?Uninitialized$initializer$@CurrentDomain@<CrtImplementationDetails>@@$$Q2P6MXXZEA;
+  [FixedAddressValueType]
+  internal static Progress ?InitializedNative@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A;
+  internal static __FnPtr<void ()> ?A0xeb4f7d22.?InitializedNative$initializer$@CurrentDomain@<CrtImplementationDetails>@@$$Q2P6MXXZEA;
+  internal static __s_GUID _GUID_90f1a06c_7712_4762_86b5_7a5eba6bdb02;
+  internal static __s_GUID _GUID_90f1a06e_7712_4762_86b5_7a5eba6bdb02;
+  [FixedAddressValueType]
+  internal static Progress ?InitializedPerAppDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A;
+  internal static bool ?Entered@DefaultDomain@<CrtImplementationDetails>@@2_NA;
+  internal static TriBool ?hasNative@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A;
+  internal static bool ?InitializedPerProcess@DefaultDomain@<CrtImplementationDetails>@@2_NA;
+  internal static int ?Count@AllDomains@<CrtImplementationDetails>@@2HA;
+  [FixedAddressValueType]
+  internal static int ?Initialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA;
+  internal static bool ?InitializedNativeFromCCTOR@DefaultDomain@<CrtImplementationDetails>@@2_NA;
+  [FixedAddressValueType]
+  internal static bool ?IsDefaultDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2_NA;
+  [FixedAddressValueType]
+  internal static Progress ?InitializedVtables@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A;
+  internal static bool ?InitializedNative@DefaultDomain@<CrtImplementationDetails>@@2_NA;
+  [FixedAddressValueType]
+  internal static Progress ?InitializedPerProcess@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A;
+  internal static TriBool ?hasPerProcess@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A;
+  internal static $ArrayType$$$BY00Q6MPEBXXZ __xc_mp_z;
+  internal static $ArrayType$$$BY00Q6MPEBXXZ __xi_vt_z;
+  internal static __FnPtr<void ()> ?A0xeb4f7d22.?InitializedPerProcess$initializer$@CurrentDomain@<CrtImplementationDetails>@@$$Q2P6MXXZEA;
+  internal static $ArrayType$$$BY00Q6MPEBXXZ __xc_ma_a;
+  internal static $ArrayType$$$BY00Q6MPEBXXZ __xc_ma_z;
+  internal static __FnPtr<void ()> ?A0xeb4f7d22.?InitializedPerAppDomain$initializer$@CurrentDomain@<CrtImplementationDetails>@@$$Q2P6MXXZEA;
+  internal static $ArrayType$$$BY00Q6MPEBXXZ __xi_vt_a;
+  internal static __FnPtr<void ()> ?A0xeb4f7d22.?Initialized$initializer$@CurrentDomain@<CrtImplementationDetails>@@$$Q2P6MXXZEA;
+  internal static $ArrayType$$$BY00Q6MPEBXXZ __xc_mp_a;
+  internal static __FnPtr<void ()> ?A0xeb4f7d22.?InitializedVtables$initializer$@CurrentDomain@<CrtImplementationDetails>@@$$Q2P6MXXZEA;
+  internal static __FnPtr<void ()> ?A0xeb4f7d22.?IsDefaultDomain$initializer$@CurrentDomain@<CrtImplementationDetails>@@$$Q2P6MXXZEA;
+  public static __FnPtr<int (void*)> __m2mep@?DoNothing@DefaultDomain@<CrtImplementationDetails>@@$$FCAJPEAX@Z;
+  public static __FnPtr<int (void*)> __m2mep@?_UninitializeDefaultDomain@LanguageSupport@<CrtImplementationDetails>@@$$FCAJPEAX@Z;
+  public static unsafe int** __unep@?DoNothing@DefaultDomain@<CrtImplementationDetails>@@$$FCAJPEAX@Z;
+  public static unsafe int** __unep@?_UninitializeDefaultDomain@LanguageSupport@<CrtImplementationDetails>@@$$FCAJPEAX@Z;
+  internal static unsafe __FnPtr<void ()>* ?A0xdf32f105.__onexitbegin_m;
+  internal static ulong ?A0xdf32f105.__exit_list_size;
+  [FixedAddressValueType]
+  internal static unsafe __FnPtr<void ()>* __onexitend_app_domain;
+  [FixedAddressValueType]
+  internal static unsafe void* ?_lock@AtExitLock@<CrtImplementationDetails>@@$$Q0PEAXEA;
+  [FixedAddressValueType]
+  internal static int ?_ref_count@AtExitLock@<CrtImplementationDetails>@@$$Q0HA;
+  internal static unsafe __FnPtr<void ()>* ?A0xdf32f105.__onexitend_m;
+  [FixedAddressValueType]
+  internal static ulong __exit_list_size_app_domain;
+  [FixedAddressValueType]
+  internal static unsafe __FnPtr<void ()>* __onexitbegin_app_domain;
+  internal static $ArrayType$$$BY0A@P6AHXZ __xi_z;
+  internal static __scrt_native_startup_state __scrt_current_native_startup_state;
+  internal static unsafe void* __scrt_native_startup_lock;
+  internal static $ArrayType$$$BY0A@P6AXXZ __xc_a;
+  internal static $ArrayType$$$BY0A@P6AHXZ __xi_a;
+  internal static uint __scrt_native_dllmain_reason;
+  internal static $ArrayType$$$BY0A@P6AXXZ __xc_z;
+
+  [STAThread]
+  internal static void MainLogic()
+  {
+    Thread thread = new Thread(new ThreadStart(App.mainlogic));
+    thread.SetApartmentState(ApartmentState.STA);
+    thread.Start();
+    thread.Join();
+  }
+
+  internal static unsafe void AddLog(char* value) => Logger.AddLog(new string(value));
+
+  internal static unsafe void AddLog(char* field, char* value)
+  {
+    Logger.AddLog(new string(field), new string(value));
+  }
+
+  internal static unsafe void AddError(char* value) => Logger.AddError(new string(value));
+
+  internal static void <CrtImplementationDetails>.ThrowNestedModuleLoadException(
+    Exception innerException,
+    Exception nestedException)
+  {
+    throw new ModuleLoadExceptionHandlerException("A nested exception occurred after the primary exception that caused the C++ module to fail to load.%n", innerException, nestedException);
+  }
+
+  internal static void <CrtImplementationDetails>.ThrowModuleLoadException(
+    string errorMessage)
+  {
+    throw new ModuleLoadException(errorMessage);
+  }
+
+  internal static void <CrtImplementationDetails>.ThrowModuleLoadException(
+    string errorMessage,
+    Exception innerException)
+  {
+    throw new ModuleLoadException(errorMessage, innerException);
+  }
+
+  internal static void <CrtImplementationDetails>.RegisterModuleUninitializer(
+    EventHandler handler)
+  {
+    ModuleUninitializer._ModuleUninitializer.AddHandler(handler);
+  }
+
+  [SecuritySafeCritical]
+  internal static unsafe Guid <CrtImplementationDetails>.FromGUID(_GUID* guid)
+  {
+    return new Guid((uint) *(int*) guid, *(ushort*) ((IntPtr) guid + 4L), *(ushort*) ((IntPtr) guid + 6L), *(byte*) ((IntPtr) guid + 8L), *(byte*) ((IntPtr) guid + 9L), *(byte*) ((IntPtr) guid + 10L), *(byte*) ((IntPtr) guid + 11L), *(byte*) ((IntPtr) guid + 12L), *(byte*) ((IntPtr) guid + 13L), *(byte*) ((IntPtr) guid + 14L), *(byte*) ((IntPtr) guid + 15L));
+  }
+
+  [SecurityCritical]
+  internal static unsafe int __get_default_appdomain(IUnknown** ppUnk)
+  {
+    ICorRuntimeHost* icorRuntimeHostPtr1 = (ICorRuntimeHost*) 0L;
+    int defaultAppdomain;
+    try
+    {
+      Guid riid = <Module>.<CrtImplementationDetails>.FromGUID((_GUID*) &<Module>._GUID_cb2f6722_ab3a_11d2_9c40_00c04fa30a3e);
+      icorRuntimeHostPtr1 = (ICorRuntimeHost*) RuntimeEnvironment.GetRuntimeInterfaceAsIntPtr(<Module>.<CrtImplementationDetails>.FromGUID((_GUID*) &<Module>._GUID_cb2f6723_ab3a_11d2_9c40_00c04fa30a3e), riid).ToPointer();
+      goto label_4;
+    }
+    catch (Exception ex)
+    {
+      defaultAppdomain = Marshal.GetHRForException(ex);
+    }
+    if (defaultAppdomain < 0)
+      goto label_5;
+label_4:
+    // ISSUE: cast to a function pointer type
+    // ISSUE: function pointer call
+    defaultAppdomain = __calli((__FnPtr<int (IntPtr, IUnknown**)>) *(long*) (*(long*) icorRuntimeHostPtr1 + 104L))((IUnknown**) icorRuntimeHostPtr1, (IntPtr) ppUnk);
+    ICorRuntimeHost* icorRuntimeHostPtr2 = icorRuntimeHostPtr1;
+    // ISSUE: cast to a function pointer type
+    // ISSUE: function pointer call
+    int num = (int) __calli((__FnPtr<uint (IntPtr)>) *(long*) (*(long*) icorRuntimeHostPtr2 + 16L))((IntPtr) icorRuntimeHostPtr2);
+label_5:
+    return defaultAppdomain;
+  }
+
+  internal static unsafe void __release_appdomain(IUnknown* ppUnk)
+  {
+    IUnknown* iunknownPtr = ppUnk;
+    // ISSUE: cast to a function pointer type
+    // ISSUE: function pointer call
+    int num = (int) __calli((__FnPtr<uint (IntPtr)>) *(long*) (*(long*) iunknownPtr + 16L))((IntPtr) iunknownPtr);
+  }
+
+  [SecurityCritical]
+  internal static unsafe AppDomain <CrtImplementationDetails>.GetDefaultDomain()
+  {
+    IUnknown* ppUnk = (IUnknown*) 0L;
+    int defaultAppdomain = <Module>.__get_default_appdomain(&ppUnk);
+    if (defaultAppdomain >= 0)
+    {
+      try
+      {
+        return (AppDomain) Marshal.GetObjectForIUnknown(new IntPtr((void*) ppUnk));
+      }
+      finally
+      {
+        <Module>.__release_appdomain(ppUnk);
+      }
+    }
+    else
+    {
+      Marshal.ThrowExceptionForHR(defaultAppdomain);
+      return (AppDomain) null;
+    }
+  }
+
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.DoCallBackInDefaultDomain(
+    __FnPtr<int (void*)> function,
+    void* cookie)
+  {
+    Guid riid = <Module>.<CrtImplementationDetails>.FromGUID((_GUID*) &<Module>._GUID_90f1a06c_7712_4762_86b5_7a5eba6bdb02);
+    ICLRRuntimeHost* pointer = (ICLRRuntimeHost*) RuntimeEnvironment.GetRuntimeInterfaceAsIntPtr(<Module>.<CrtImplementationDetails>.FromGUID((_GUID*) &<Module>._GUID_90f1a06e_7712_4762_86b5_7a5eba6bdb02), riid).ToPointer();
+    try
+    {
+      AppDomain defaultDomain = <Module>.<CrtImplementationDetails>.GetDefaultDomain();
+      long num1 = *(long*) (*(long*) pointer + 64L);
+      uint id = (uint) defaultDomain.Id;
+      ICLRRuntimeHost* iclrRuntimeHostPtr = pointer;
+      int num2 = (int) id;
+      __FnPtr<int (void*)> local = function;
+      void* voidPtr = cookie;
+      // ISSUE: cast to a function pointer type
+      // ISSUE: cast to a function pointer type
+      // ISSUE: function pointer call
+      int errorCode = __calli((__FnPtr<int (IntPtr, uint, __FnPtr<int (void*)>, void*)>) num1)((void*) iclrRuntimeHostPtr, (__FnPtr<int (void*)>) num2, (uint) local, (IntPtr) voidPtr);
+      if (errorCode >= 0)
+        return;
+      Marshal.ThrowExceptionForHR(errorCode);
+    }
+    finally
+    {
+      ICLRRuntimeHost* iclrRuntimeHostPtr = pointer;
+      // ISSUE: cast to a function pointer type
+      // ISSUE: function pointer call
+      int num = (int) __calli((__FnPtr<uint (IntPtr)>) *(long*) (*(long*) iclrRuntimeHostPtr + 16L))((IntPtr) iclrRuntimeHostPtr);
+    }
+  }
+
+  [return: MarshalAs(UnmanagedType.U1)]
+  internal static bool __scrt_is_safe_for_managed_code()
+  {
+    switch (<Module>.__scrt_native_dllmain_reason)
+    {
+      case 0:
+      case 1:
+        return false;
+      default:
+        return true;
+    }
+  }
+
+  [SecuritySafeCritical]
+  internal static unsafe int <CrtImplementationDetails>.DefaultDomain.DoNothing(
+    void* cookie)
+  {
+    GC.KeepAlive((object) int.MaxValue);
+    return 0;
+  }
+
+  [SecuritySafeCritical]
+  [return: MarshalAs(UnmanagedType.U1)]
+  internal static unsafe bool <CrtImplementationDetails>.DefaultDomain.HasPerProcess()
+  {
+    if (<Module>.?hasPerProcess@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A != (TriBool) 2)
+      return <Module>.?hasPerProcess@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A == (TriBool) -1;
+    void** voidPtr = (void**) &<Module>.__xc_mp_a;
+    if (ref <Module>.__xc_mp_a < ref <Module>.__xc_mp_z)
+    {
+      while (*(long*) voidPtr == 0L)
+      {
+        voidPtr += 8L;
+        if ((IntPtr) voidPtr >= ref <Module>.__xc_mp_z)
+          goto label_5;
+      }
+      <Module>.?hasPerProcess@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A = (TriBool) -1;
+      return true;
+    }
+label_5:
+    <Module>.?hasPerProcess@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A = (TriBool) 0;
+    return false;
+  }
+
+  [SecuritySafeCritical]
+  [return: MarshalAs(UnmanagedType.U1)]
+  internal static unsafe bool <CrtImplementationDetails>.DefaultDomain.HasNative()
+  {
+    if (<Module>.?hasNative@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A != (TriBool) 2)
+      return <Module>.?hasNative@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A == (TriBool) -1;
+    void** voidPtr1 = (void**) &<Module>.__xi_a;
+    if (ref <Module>.__xi_a < ref <Module>.__xi_z)
+    {
+      while (*(long*) voidPtr1 == 0L)
+      {
+        voidPtr1 += 8L;
+        if ((IntPtr) voidPtr1 >= ref <Module>.__xi_z)
+          goto label_5;
+      }
+      <Module>.?hasNative@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A = (TriBool) -1;
+      return true;
+    }
+label_5:
+    void** voidPtr2 = (void**) &<Module>.__xc_a;
+    if (ref <Module>.__xc_a < ref <Module>.__xc_z)
+    {
+      while (*(long*) voidPtr2 == 0L)
+      {
+        voidPtr2 += 8L;
+        if ((IntPtr) voidPtr2 >= ref <Module>.__xc_z)
+          goto label_9;
+      }
+      <Module>.?hasNative@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A = (TriBool) -1;
+      return true;
+    }
+label_9:
+    <Module>.?hasNative@DefaultDomain@<CrtImplementationDetails>@@0W4TriBool@2@A = (TriBool) 0;
+    return false;
+  }
+
+  [SecuritySafeCritical]
+  [return: MarshalAs(UnmanagedType.U1)]
+  internal static bool <CrtImplementationDetails>.DefaultDomain.NeedsInitialization()
+  {
+    return <Module>.<CrtImplementationDetails>.DefaultDomain.HasPerProcess() && !<Module>.?InitializedPerProcess@DefaultDomain@<CrtImplementationDetails>@@2_NA || <Module>.<CrtImplementationDetails>.DefaultDomain.HasNative() && !<Module>.?InitializedNative@DefaultDomain@<CrtImplementationDetails>@@2_NA && <Module>.__scrt_current_native_startup_state == (__scrt_native_startup_state) 0;
+  }
+
+  [return: MarshalAs(UnmanagedType.U1)]
+  internal static bool <CrtImplementationDetails>.DefaultDomain.NeedsUninitialization()
+  {
+    return <Module>.?Entered@DefaultDomain@<CrtImplementationDetails>@@2_NA;
+  }
+
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.DefaultDomain.Initialize()
+  {
+    // ISSUE: cast to a function pointer type
+    <Module>.<CrtImplementationDetails>.DoCallBackInDefaultDomain((__FnPtr<int (void*)>) (IntPtr) <Module>.__unep@?DoNothing@DefaultDomain@<CrtImplementationDetails>@@$$FCAJPEAX@Z, (void*) 0L);
+  }
+
+  internal static void ?A0xeb4f7d22.??__E?Initialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA@@YMXXZ()
+  {
+    <Module>.?Initialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA = 0;
+  }
+
+  internal static void ?A0xeb4f7d22.??__E?Uninitialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA@@YMXXZ()
+  {
+    <Module>.?Uninitialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA = 0;
+  }
+
+  internal static void ?A0xeb4f7d22.??__E?IsDefaultDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2_NA@@YMXXZ()
+  {
+    <Module>.?IsDefaultDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2_NA = false;
+  }
+
+  internal static void ?A0xeb4f7d22.??__E?InitializedVtables@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A@@YMXXZ()
+  {
+    <Module>.?InitializedVtables@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 0;
+  }
+
+  internal static void ?A0xeb4f7d22.??__E?InitializedNative@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A@@YMXXZ()
+  {
+    <Module>.?InitializedNative@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 0;
+  }
+
+  internal static void ?A0xeb4f7d22.??__E?InitializedPerProcess@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A@@YMXXZ()
+  {
+    <Module>.?InitializedPerProcess@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 0;
+  }
+
+  internal static void ?A0xeb4f7d22.??__E?InitializedPerAppDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A@@YMXXZ()
+  {
+    <Module>.?InitializedPerAppDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 0;
+  }
+
+  [SecuritySafeCritical]
+  [DebuggerStepThrough]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.InitializeVtables(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.gcroot<System::String ^>.=((gcroot<System::String ^>*) obj0, "The C++ module failed to load during vtable initialization.%n");
+    <Module>.?InitializedVtables@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 1;
+    <Module>._initterm_m((__FnPtr<void* ()>*) &<Module>.__xi_vt_a, (__FnPtr<void* ()>*) &<Module>.__xi_vt_z);
+    <Module>.?InitializedVtables@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 2;
+  }
+
+  [SecuritySafeCritical]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.InitializeDefaultAppDomain(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.gcroot<System::String ^>.=((gcroot<System::String ^>*) obj0, "The C++ module failed to load while attempting to initialize the default appdomain.%n");
+    <Module>.<CrtImplementationDetails>.DefaultDomain.Initialize();
+  }
+
+  [SecuritySafeCritical]
+  [DebuggerStepThrough]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.InitializeNative(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.gcroot<System::String ^>.=((gcroot<System::String ^>*) obj0, "The C++ module failed to load during native initialization.%n");
+    <Module>.__security_init_cookie();
+    <Module>.?InitializedNative@DefaultDomain@<CrtImplementationDetails>@@2_NA = true;
+    if (!<Module>.__scrt_is_safe_for_managed_code())
+      <Module>.abort();
+    if (<Module>.__scrt_current_native_startup_state == (__scrt_native_startup_state) 1)
+      <Module>.abort();
+    if (<Module>.__scrt_current_native_startup_state != (__scrt_native_startup_state) 0)
+      return;
+    <Module>.?InitializedNative@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 1;
+    <Module>.__scrt_current_native_startup_state = (__scrt_native_startup_state) 1;
+    if (<Module>._initterm_e((__FnPtr<int ()>*) &<Module>.__xi_a, (__FnPtr<int ()>*) &<Module>.__xi_z) != 0)
+      <Module>.<CrtImplementationDetails>.ThrowModuleLoadException(<Module>.gcroot<System::String ^>..PE$AAVString@System@@((gcroot<System::String ^>*) obj0));
+    <Module>._initterm((__FnPtr<void ()>*) &<Module>.__xc_a, (__FnPtr<void ()>*) &<Module>.__xc_z);
+    <Module>.__scrt_current_native_startup_state = (__scrt_native_startup_state) 2;
+    <Module>.?InitializedNativeFromCCTOR@DefaultDomain@<CrtImplementationDetails>@@2_NA = true;
+    <Module>.?InitializedNative@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 2;
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.InitializePerProcess(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.gcroot<System::String ^>.=((gcroot<System::String ^>*) obj0, "The C++ module failed to load during process initialization.%n");
+    <Module>.?InitializedPerProcess@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 1;
+    <Module>._initatexit_m();
+    <Module>._initterm_m((__FnPtr<void* ()>*) &<Module>.__xc_mp_a, (__FnPtr<void* ()>*) &<Module>.__xc_mp_z);
+    <Module>.?InitializedPerProcess@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 2;
+    <Module>.?InitializedPerProcess@DefaultDomain@<CrtImplementationDetails>@@2_NA = true;
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.InitializePerAppDomain(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.gcroot<System::String ^>.=((gcroot<System::String ^>*) obj0, "The C++ module failed to load during appdomain initialization.%n");
+    <Module>.?InitializedPerAppDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 1;
+    <Module>._initatexit_app_domain();
+    <Module>._initterm_m((__FnPtr<void* ()>*) &<Module>.__xc_ma_a, (__FnPtr<void* ()>*) &<Module>.__xc_ma_z);
+    <Module>.?InitializedPerAppDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2W4Progress@2@A = (Progress) 2;
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.InitializeUninitializer(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.gcroot<System::String ^>.=((gcroot<System::String ^>*) obj0, "The C++ module failed to load during registration for the unload events.%n");
+    <Module>.<CrtImplementationDetails>.RegisterModuleUninitializer(new EventHandler(<Module>.<CrtImplementationDetails>.LanguageSupport.DomainUnload));
+  }
+
+  [DebuggerStepThrough]
+  [ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)]
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport._Initialize(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.?IsDefaultDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2_NA = AppDomain.CurrentDomain.IsDefaultAppDomain();
+    <Module>.?Entered@DefaultDomain@<CrtImplementationDetails>@@2_NA = <Module>.?IsDefaultDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2_NA || <Module>.?Entered@DefaultDomain@<CrtImplementationDetails>@@2_NA;
+    void* fiberPtrId = <Module>._getFiberPtrId();
+    int num1 = 0;
+    int num2 = 0;
+    int num3 = 0;
+    RuntimeHelpers.PrepareConstrainedRegions();
+    try
+    {
+      while (num2 == 0)
+      {
+        try
+        {
+        }
+        finally
+        {
+          // ISSUE: cast to a reference type
+          void* voidPtr = (void*) Interlocked.CompareExchange((long&) ref <Module>.__scrt_native_startup_lock, (long) fiberPtrId, 0L);
+          if ((IntPtr) voidPtr == IntPtr.Zero)
+            num2 = 1;
+          else if (voidPtr == fiberPtrId)
+          {
+            num1 = 1;
+            num2 = 1;
+          }
+        }
+        if (num2 == 0)
+          <Module>.Sleep(1000U);
+      }
+      <Module>.<CrtImplementationDetails>.LanguageSupport.InitializeVtables(obj0);
+      if (<Module>.?IsDefaultDomain@CurrentDomain@<CrtImplementationDetails>@@$$Q2_NA)
+      {
+        <Module>.<CrtImplementationDetails>.LanguageSupport.InitializeNative(obj0);
+        <Module>.<CrtImplementationDetails>.LanguageSupport.InitializePerProcess(obj0);
+      }
+      else
+        num3 = <Module>.<CrtImplementationDetails>.DefaultDomain.NeedsInitialization() ? 1 : num3;
+    }
+    finally
+    {
+      if (num1 == 0)
+      {
+        // ISSUE: cast to a reference type
+        Interlocked.Exchange((long&) ref <Module>.__scrt_native_startup_lock, 0L);
+      }
+    }
+    if (num3 != 0)
+      <Module>.<CrtImplementationDetails>.LanguageSupport.InitializeDefaultAppDomain(obj0);
+    <Module>.<CrtImplementationDetails>.LanguageSupport.InitializePerAppDomain(obj0);
+    <Module>.?Initialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA = 1;
+    <Module>.<CrtImplementationDetails>.LanguageSupport.InitializeUninitializer(obj0);
+  }
+
+  [SecurityCritical]
+  internal static void <CrtImplementationDetails>.LanguageSupport.UninitializeAppDomain()
+  {
+    <Module>._app_exit_callback();
+  }
+
+  [SecurityCritical]
+  internal static unsafe int <CrtImplementationDetails>.LanguageSupport._UninitializeDefaultDomain(
+    void* cookie)
+  {
+    <Module>._exit_callback();
+    <Module>.?InitializedPerProcess@DefaultDomain@<CrtImplementationDetails>@@2_NA = false;
+    if (<Module>.?InitializedNativeFromCCTOR@DefaultDomain@<CrtImplementationDetails>@@2_NA)
+    {
+      <Module>._cexit();
+      <Module>.__scrt_current_native_startup_state = (__scrt_native_startup_state) 0;
+      <Module>.?InitializedNativeFromCCTOR@DefaultDomain@<CrtImplementationDetails>@@2_NA = false;
+    }
+    <Module>.?InitializedNative@DefaultDomain@<CrtImplementationDetails>@@2_NA = false;
+    return 0;
+  }
+
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.UninitializeDefaultDomain()
+  {
+    if (!<Module>.<CrtImplementationDetails>.DefaultDomain.NeedsUninitialization())
+      return;
+    if (AppDomain.CurrentDomain.IsDefaultAppDomain())
+    {
+      <Module>.<CrtImplementationDetails>.LanguageSupport._UninitializeDefaultDomain((void*) 0L);
+    }
+    else
+    {
+      // ISSUE: cast to a function pointer type
+      <Module>.<CrtImplementationDetails>.DoCallBackInDefaultDomain((__FnPtr<int (void*)>) (IntPtr) <Module>.__unep@?_UninitializeDefaultDomain@LanguageSupport@<CrtImplementationDetails>@@$$FCAJPEAX@Z, (void*) 0L);
+    }
+  }
+
+  [ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)]
+  [SecurityCritical]
+  [PrePrepareMethod]
+  internal static void <CrtImplementationDetails>.LanguageSupport.DomainUnload(
+    object A_0,
+    EventArgs A_1)
+  {
+    if (<Module>.?Initialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA == 0 || Interlocked.Exchange(ref <Module>.?Uninitialized@CurrentDomain@<CrtImplementationDetails>@@$$Q2HA, 1) != 0)
+      return;
+    int num = Interlocked.Decrement(ref <Module>.?Count@AllDomains@<CrtImplementationDetails>@@2HA) == 0 ? 1 : 0;
+    <Module>.<CrtImplementationDetails>.LanguageSupport.UninitializeAppDomain();
+    if ((byte) num == (byte) 0)
+      return;
+    <Module>.<CrtImplementationDetails>.LanguageSupport.UninitializeDefaultDomain();
+  }
+
+  [ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)]
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.Cleanup(
+    [In] LanguageSupport* obj0,
+    Exception innerException)
+  {
+    try
+    {
+      bool flag = Interlocked.Decrement(ref <Module>.?Count@AllDomains@<CrtImplementationDetails>@@2HA) == 0;
+      <Module>.<CrtImplementationDetails>.LanguageSupport.UninitializeAppDomain();
+      if (!flag)
+        return;
+      <Module>.<CrtImplementationDetails>.LanguageSupport.UninitializeDefaultDomain();
+    }
+    catch (Exception ex)
+    {
+      <Module>.<CrtImplementationDetails>.ThrowNestedModuleLoadException(innerException, ex);
+    }
+    catch
+    {
+      <Module>.<CrtImplementationDetails>.ThrowNestedModuleLoadException(innerException, (Exception) null);
+    }
+  }
+
+  [SecurityCritical]
+  internal static unsafe LanguageSupport* <CrtImplementationDetails>.LanguageSupport.{ctor}(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.gcroot<System::String ^>.{ctor}((gcroot<System::String ^>*) obj0);
+    return obj0;
+  }
+
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.{dtor}(
+    [In] LanguageSupport* obj0)
+  {
+    <Module>.gcroot<System::String ^>.{dtor}((gcroot<System::String ^>*) obj0);
+  }
+
+  [DebuggerStepThrough]
+  [ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)]
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.LanguageSupport.Initialize(
+    [In] LanguageSupport* obj0)
+  {
+    bool flag = false;
+    RuntimeHelpers.PrepareConstrainedRegions();
+    try
+    {
+      <Module>.gcroot<System::String ^>.=((gcroot<System::String ^>*) obj0, "The C++ module failed to load.%n");
+      RuntimeHelpers.PrepareConstrainedRegions();
+      try
+      {
+      }
+      finally
+      {
+        Interlocked.Increment(ref <Module>.?Count@AllDomains@<CrtImplementationDetails>@@2HA);
+        flag = true;
+      }
+      <Module>.<CrtImplementationDetails>.LanguageSupport._Initialize(obj0);
+    }
+    catch (Exception ex)
+    {
+      if (flag)
+        <Module>.<CrtImplementationDetails>.LanguageSupport.Cleanup(obj0, ex);
+      <Module>.<CrtImplementationDetails>.ThrowModuleLoadException(<Module>.gcroot<System::String ^>..PE$AAVString@System@@((gcroot<System::String ^>*) obj0), ex);
+    }
+    catch
+    {
+      if (flag)
+        <Module>.<CrtImplementationDetails>.LanguageSupport.Cleanup(obj0, (Exception) null);
+      <Module>.<CrtImplementationDetails>.ThrowModuleLoadException(<Module>.gcroot<System::String ^>..PE$AAVString@System@@((gcroot<System::String ^>*) obj0), (Exception) null);
+    }
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  static unsafe <Module>()
+  {
+    LanguageSupport languageSupport;
+    <Module>.<CrtImplementationDetails>.LanguageSupport.{ctor}(&languageSupport);
+    // ISSUE: fault handler
+    try
+    {
+      <Module>.<CrtImplementationDetails>.LanguageSupport.Initialize(&languageSupport);
+    }
+    __fault
+    {
+      // ISSUE: method pointer
+      // ISSUE: cast to a function pointer type
+      <Module>.___CxxCallUnwindDtor((__FnPtr<void (void*)>) __methodptr(<CrtImplementationDetails>.LanguageSupport.{dtor}), (void*) &languageSupport);
+    }
+    <Module>.<CrtImplementationDetails>.LanguageSupport.{dtor}(&languageSupport);
+  }
+
+  [SecuritySafeCritical]
+  internal static unsafe string gcroot<System::String ^>..PE$AAVString@System@@(
+    [In] gcroot<System::String ^>* obj0)
+  {
+    return (string) ((GCHandle) new IntPtr((void*) *(long*) obj0)).Target;
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static unsafe gcroot<System::String ^>* gcroot<System::String ^>.=(
+    [In] gcroot<System::String ^>* obj0,
+    string t)
+  {
+    ((GCHandle) new IntPtr((void*) *(long*) obj0)).Target = (object) t;
+    return obj0;
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static unsafe void gcroot<System::String ^>.{dtor}(
+    [In] gcroot<System::String ^>* obj0)
+  {
+    ((GCHandle) new IntPtr((void*) *(long*) obj0)).Free();
+    *(long*) obj0 = 0L;
+  }
+
+  [DebuggerStepThrough]
+  [SecuritySafeCritical]
+  internal static unsafe gcroot<System::String ^>* gcroot<System::String ^>.{ctor}(
+    [In] gcroot<System::String ^>* obj0)
+  {
+    IntPtr num = (IntPtr) GCHandle.Alloc((object) null);
+    *(long*) obj0 = (long) num.ToPointer();
+    return obj0;
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static unsafe ValueType <CrtImplementationDetails>.AtExitLock._handle()
+  {
+    return (IntPtr) <Module>.?_lock@AtExitLock@<CrtImplementationDetails>@@$$Q0PEAXEA != IntPtr.Zero ? (ValueType) GCHandle.FromIntPtr(new IntPtr(<Module>.?_lock@AtExitLock@<CrtImplementationDetails>@@$$Q0PEAXEA)) : (ValueType) null;
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.AtExitLock._lock_Construct(
+    object value)
+  {
+    <Module>.?_lock@AtExitLock@<CrtImplementationDetails>@@$$Q0PEAXEA = (void*) 0L;
+    <Module>.<CrtImplementationDetails>.AtExitLock._lock_Set(value);
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.AtExitLock._lock_Set(
+    object value)
+  {
+    ValueType valueType = <Module>.<CrtImplementationDetails>.AtExitLock._handle();
+    if (valueType == null)
+      <Module>.?_lock@AtExitLock@<CrtImplementationDetails>@@$$Q0PEAXEA = GCHandle.ToIntPtr(GCHandle.Alloc(value)).ToPointer();
+    else
+      ((GCHandle) valueType).Target = value;
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static object <CrtImplementationDetails>.AtExitLock._lock_Get()
+  {
+    ValueType valueType = <Module>.<CrtImplementationDetails>.AtExitLock._handle();
+    return valueType != null ? ((GCHandle) valueType).Target : (object) null;
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static unsafe void <CrtImplementationDetails>.AtExitLock._lock_Destruct()
+  {
+    ValueType valueType = <Module>.<CrtImplementationDetails>.AtExitLock._handle();
+    if (valueType == null)
+      return;
+    ((GCHandle) valueType).Free();
+    <Module>.?_lock@AtExitLock@<CrtImplementationDetails>@@$$Q0PEAXEA = (void*) 0L;
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  [return: MarshalAs(UnmanagedType.U1)]
+  internal static bool <CrtImplementationDetails>.AtExitLock.IsInitialized()
+  {
+    return <Module>.<CrtImplementationDetails>.AtExitLock._lock_Get() != null;
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static void <CrtImplementationDetails>.AtExitLock.AddRef()
+  {
+    if (!<Module>.<CrtImplementationDetails>.AtExitLock.IsInitialized())
+    {
+      <Module>.<CrtImplementationDetails>.AtExitLock._lock_Construct(new object());
+      <Module>.?_ref_count@AtExitLock@<CrtImplementationDetails>@@$$Q0HA = 0;
+    }
+    ++<Module>.?_ref_count@AtExitLock@<CrtImplementationDetails>@@$$Q0HA;
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static void <CrtImplementationDetails>.AtExitLock.RemoveRef()
+  {
+    <Module>.?_ref_count@AtExitLock@<CrtImplementationDetails>@@$$Q0HA += -1;
+    if (<Module>.?_ref_count@AtExitLock@<CrtImplementationDetails>@@$$Q0HA != 0)
+      return;
+    <Module>.<CrtImplementationDetails>.AtExitLock._lock_Destruct();
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  [return: MarshalAs(UnmanagedType.U1)]
+  internal static bool ?A0xdf32f105.__alloc_global_lock()
+  {
+    <Module>.<CrtImplementationDetails>.AtExitLock.AddRef();
+    return <Module>.<CrtImplementationDetails>.AtExitLock.IsInitialized();
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static void ?A0xdf32f105.__dealloc_global_lock()
+  {
+    <Module>.<CrtImplementationDetails>.AtExitLock.RemoveRef();
+  }
+
+  [SecurityCritical]
+  internal static unsafe void _exit_callback()
+  {
+    if (<Module>.?A0xdf32f105.__exit_list_size == 0UL)
+      return;
+    __FnPtr<void ()>* local1 = (__FnPtr<void ()>*) <Module>.DecodePointer((void*) <Module>.?A0xdf32f105.__onexitbegin_m);
+    __FnPtr<void ()>* local2 = (__FnPtr<void ()>*) <Module>.DecodePointer((void*) <Module>.?A0xdf32f105.__onexitend_m);
+    if ((IntPtr) local1 != -1L && (IntPtr) local1 != IntPtr.Zero && (IntPtr) local2 != IntPtr.Zero)
+    {
+      __FnPtr<void ()>* local3 = local1;
+      __FnPtr<void ()>* local4 = local2;
+      while (true)
+      {
+        __FnPtr<void ()>* local5;
+        __FnPtr<void ()>* local6;
+        do
+        {
+          do
+          {
+            local2 -= 8L;
+            if (local2 < local1)
+              goto label_7;
+          }
+          while (*(long*) local2 == (IntPtr) <Module>.EncodePointer((void*) 0L));
+          void* voidPtr = <Module>.DecodePointer((void*) *(long*) local2);
+          *(long*) local2 = (long) <Module>.EncodePointer((void*) 0L);
+          // ISSUE: cast to a function pointer type
+          // ISSUE: function pointer call
+          __calli((__FnPtr<void ()>) (IntPtr) voidPtr)();
+          local5 = (__FnPtr<void ()>*) <Module>.DecodePointer((void*) <Module>.?A0xdf32f105.__onexitbegin_m);
+          local6 = (__FnPtr<void ()>*) <Module>.DecodePointer((void*) <Module>.?A0xdf32f105.__onexitend_m);
+        }
+        while (local3 == local5 && local4 == local6);
+        local3 = local5;
+        local1 = local5;
+        local4 = local6;
+        local2 = local6;
+      }
+label_7:
+      Marshal.FreeHGlobal(new IntPtr((void*) local1));
+    }
+    <Module>.?A0xdf32f105.__dealloc_global_lock();
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static unsafe int _initatexit_m()
+  {
+    if (!<Module>.?A0xdf32f105.__alloc_global_lock())
+      return 0;
+    <Module>.?A0xdf32f105.__onexitbegin_m = (__FnPtr<void ()>*) <Module>.EncodePointer(Marshal.AllocHGlobal(256).ToPointer());
+    <Module>.?A0xdf32f105.__onexitend_m = <Module>.?A0xdf32f105.__onexitbegin_m;
+    <Module>.?A0xdf32f105.__exit_list_size = 32UL;
+    return 1;
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static unsafe int _initatexit_app_domain()
+  {
+    if (<Module>.?A0xdf32f105.__alloc_global_lock())
+    {
+      <Module>.__onexitbegin_app_domain = (__FnPtr<void ()>*) <Module>.EncodePointer(Marshal.AllocHGlobal(256).ToPointer());
+      <Module>.__onexitend_app_domain = <Module>.__onexitbegin_app_domain;
+      <Module>.__exit_list_size_app_domain = 32UL;
+    }
+    return 1;
+  }
+
+  [SecurityCritical]
+  [HandleProcessCorruptedStateExceptions]
+  internal static unsafe void _app_exit_callback()
+  {
+    if (<Module>.__exit_list_size_app_domain == 0UL)
+      return;
+    __FnPtr<void ()>* local1 = (__FnPtr<void ()>*) <Module>.DecodePointer((void*) <Module>.__onexitbegin_app_domain);
+    __FnPtr<void ()>* local2 = (__FnPtr<void ()>*) <Module>.DecodePointer((void*) <Module>.__onexitend_app_domain);
+    try
+    {
+      if ((IntPtr) local1 == -1L || (IntPtr) local1 == IntPtr.Zero || (IntPtr) local2 == IntPtr.Zero)
+        return;
+      __FnPtr<void ()>* local3 = local1;
+      __FnPtr<void ()>* local4 = local2;
+      while (true)
+      {
+        __FnPtr<void ()>* local5;
+        __FnPtr<void ()>* local6;
+        do
+        {
+          do
+          {
+            local2 -= 8L;
+          }
+          while (local2 >= local1 && *(long*) local2 == (IntPtr) <Module>.EncodePointer((void*) 0L));
+          if (local2 >= local1)
+          {
+            // ISSUE: cast to a function pointer type
+            __FnPtr<void ()> local7 = (__FnPtr<void ()>) (IntPtr) <Module>.DecodePointer((void*) *(long*) local2);
+            *(long*) local2 = (long) <Module>.EncodePointer((void*) 0L);
+            // ISSUE: function pointer call
+            __calli(local7)();
+            local5 = (__FnPtr<void ()>*) <Module>.DecodePointer((void*) <Module>.__onexitbegin_app_domain);
+            local6 = (__FnPtr<void ()>*) <Module>.DecodePointer((void*) <Module>.__onexitend_app_domain);
+          }
+          else
+            goto label_12;
+        }
+        while (local3 == local5 && local4 == local6);
+        local3 = local5;
+        local1 = local5;
+        local4 = local6;
+        local2 = local6;
+      }
+label_12:;
+    }
+    finally
+    {
+      Marshal.FreeHGlobal(new IntPtr((void*) local1));
+      <Module>.?A0xdf32f105.__dealloc_global_lock();
+    }
+  }
+
+  [SecurityCritical]
+  [ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)]
+  [SuppressUnmanagedCodeSecurity]
+  [DllImport("KERNEL32.dll")]
+  public static extern unsafe void* DecodePointer(void* _Ptr);
+
+  [ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)]
+  [SecurityCritical]
+  [SuppressUnmanagedCodeSecurity]
+  [DllImport("KERNEL32.dll")]
+  public static extern unsafe void* EncodePointer(void* _Ptr);
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static unsafe int _initterm_e(__FnPtr<int ()>* pfbegin, __FnPtr<int ()>* pfend)
+  {
+    int num1 = 0;
+    if (pfbegin < pfend)
+    {
+      while (num1 == 0)
+      {
+        ulong num2 = (ulong) *(long*) pfbegin;
+        if (num2 != 0UL)
+        {
+          // ISSUE: cast to a function pointer type
+          // ISSUE: function pointer call
+          num1 = __calli((__FnPtr<int ()>) (long) num2)();
+        }
+        pfbegin += 8L;
+        if (pfbegin >= pfend)
+          break;
+      }
+    }
+    return num1;
+  }
+
+  [DebuggerStepThrough]
+  [SecurityCritical]
+  internal static unsafe void _initterm(__FnPtr<void ()>* pfbegin, __FnPtr<void ()>* pfend)
+  {
+    if (pfbegin >= pfend)
+      return;
+    do
+    {
+      ulong num = (ulong) *(long*) pfbegin;
+      if (num != 0UL)
+      {
+        // ISSUE: cast to a function pointer type
+        // ISSUE: function pointer call
+        __calli((__FnPtr<void ()>) (long) num)();
+      }
+      pfbegin += 8L;
+    }
+    while (pfbegin < pfend);
+  }
+
+  [DebuggerStepThrough]
+  internal static ModuleHandle <CrtImplementationDetails>.ThisModule.Handle()
+  {
+    return typeof (ThisModule).Module.ModuleHandle;
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  [SecurityPermission(SecurityAction.Assert, UnmanagedCode = true)]
+  internal static unsafe void _initterm_m(__FnPtr<void* ()>* pfbegin, __FnPtr<void* ()>* pfend)
+  {
+    if (pfbegin >= pfend)
+      return;
+    do
+    {
+      ulong methodToken = (ulong) *(long*) pfbegin;
+      if (methodToken != 0UL)
+      {
+        // ISSUE: cast to a function pointer type
+        // ISSUE: function pointer call
+        void* voidPtr = __calli(<Module>.<CrtImplementationDetails>.ThisModule.ResolveMethod<void const * __clrcall(void)>((__FnPtr<void* ()>) (long) methodToken))();
+      }
+      pfbegin += 8L;
+    }
+    while (pfbegin < pfend);
+  }
+
+  [SecurityCritical]
+  [DebuggerStepThrough]
+  internal static unsafe __FnPtr<void* ()> <CrtImplementationDetails>.ThisModule.ResolveMethod<void const * __clrcall(void)>(
+    __FnPtr<void* ()> methodToken)
+  {
+    // ISSUE: cast to a function pointer type
+    return (__FnPtr<void* ()>) (IntPtr) <Module>.<CrtImplementationDetails>.ThisModule.Handle().ResolveMethodHandle((int) methodToken).GetFunctionPointer().ToPointer();
+  }
+
+  [SecurityCritical]
+  [HandleProcessCorruptedStateExceptions]
+  [ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)]
+  [SecurityPermission(SecurityAction.Assert, UnmanagedCode = true)]
+  internal static unsafe void ___CxxCallUnwindDtor(__FnPtr<void (void*)> pDtor, void* pThis)
+  {
+    try
+    {
+      // ISSUE: function pointer call
+      __calli(pDtor)(pThis);
+    }
+    catch (Exception ex) when (<Module>.__FrameUnwindFilter((_EXCEPTION_POINTERS*) Marshal.GetExceptionPointers()) != 0)
+    {
+    }
+  }
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern uint WinMainCRTStartup();
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern unsafe int IsValidApp([In] int obj0, [In] void* obj1);
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern unsafe int ModifyApp([In] int obj0, [In] void* obj1, [MarshalAs(UnmanagedType.U1)] bool _param2, [MarshalAs(UnmanagedType.U1)] bool _param3);
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern void ChangePatchValues([In] long obj0, [In] long obj1, [In] long obj2, [In] long obj3);
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern int LaunchApp();
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern unsafe long TryFindValue([In] int* obj0);
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern unsafe int SetDataSource([In] int obj0, [In] void* obj1, [In] int obj2);
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern int EnableDebugPriv();
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern void IsBetaEditionTarget([MarshalAs(UnmanagedType.U1)] bool _param0);
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern unsafe void* _getFiberPtrId();
+
+  [SuppressUnmanagedCodeSecurity]
+  [DllImport("", EntryPoint = "", CallingConvention = CallingConvention.Cdecl, SetLastError = true)]
+  [MethodImpl(MethodImplOptions.Unmanaged, MethodCodeType = MethodCodeType.Native)]
+  internal static extern void _cexit();
+
+  [SuppressUnmanagedCodeSecurity]
+  [DllImport("", EntryPoint = "", CallingConvention = CallingConvention.Cdecl, SetLastError = true)]
+  [MethodImpl(MethodImplOptions.Unmanaged, MethodCodeType = MethodCodeType.Native)]
+  internal static extern void Sleep([In] uint obj0);
+
+  [SuppressUnmanagedCodeSecurity]
+  [DllImport("", EntryPoint = "", CallingConvention = CallingConvention.Cdecl, SetLastError = true)]
+  [MethodImpl(MethodImplOptions.Unmanaged, MethodCodeType = MethodCodeType.Native)]
+  internal static extern void abort();
+
+  [SuppressUnmanagedCodeSecurity]
+  [MethodImpl(MethodImplOptions.Unmanaged | MethodImplOptions.PreserveSig, MethodCodeType = MethodCodeType.Native)]
+  internal static extern void __security_init_cookie();
+
+  [SuppressUnmanagedCodeSecurity]
+  [DllImport("", EntryPoint = "", CallingConvention = CallingConvention.Cdecl, SetLastError = true)]
+  [MethodImpl(MethodImplOptions.Unmanaged, MethodCodeType = MethodCodeType.Native)]
+  internal static extern unsafe int __FrameUnwindFilter([In] _EXCEPTION_POINTERS* obj0);
+}
+```
+--------------------------------------------------
+
+File: Backup\_EXCEPTION_POINTERS.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+[NativeCppClass]
+[StructLayout(LayoutKind.Sequential, Size = 16)]
+internal struct _EXCEPTION_POINTERS
+{
+  private long <alignment member>;
+}
+
+```
+--------------------------------------------------
+
+File: Backup\_GUID.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+[UnsafeValueType]
+[NativeCppClass]
+[StructLayout(LayoutKind.Sequential, Size = 16)]
+internal struct _GUID
+{
+  private int <alignment member>;
+}
+
+```
+--------------------------------------------------
+
+File: Backup\__scrt_native_startup_state.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+
+#nullable disable
+[NativeCppClass]
+internal enum __scrt_native_startup_state
+{
+}
+
+```
+--------------------------------------------------
+
+File: Backup\__s_GUID.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+[NativeCppClass]
+[UnsafeValueType]
+[StructLayout(LayoutKind.Sequential, Size = 16)]
+internal struct __s_GUID
+{
+  private int <alignment member>;
+}
+
+```
+--------------------------------------------------
+
+File: Backup\mcenters\API.cs
+Guessed Purpose: Handles external interactions or APIs
+Content:
+```
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+using System.Windows.Media;
+
+#nullable disable
+namespace mcenters
+{
+  public class API
+  {
+    public static bool BetaEditionMode = false;
+    private static Dictionary<string, Patch> SupportedVersions;
+    private static bool ignoreVerification = false;
+    private static int appId = 0;
+
+    public static void SetupVersionList()
+    {
+      API.SupportedVersions = new Dictionary<string, Patch>(10);
+      API.SupportedVersions.Add("1.19.41.01", new Patch("1.19.41.01", 40691344807608369L, 40691344824385585L, 4974556687L, 14621280L));
+      API.SupportedVersions.Add("1.19.51.011", new Patch("1.19.51.011", 40691344807608369L, 40691344824385585L, 4974556687L, 14600288L));
+    }
+
+    public static void ShouldOpenBetaEdition([MarshalAs(UnmanagedType.U1)] bool val)
+    {
+      API.BetaEditionMode = val;
+      <Module>.IsBetaEditionTarget(val);
+    }
+
+    public static int Test() => 1;
+
+    public static int EnableDebug() => <Module>.EnableDebugPriv();
+
+    [return: MarshalAs(UnmanagedType.U1)]
+    private static unsafe bool search(Process process, FileVersionInfo fileVersion)
+    {
+      Logger.AddLog("Trying Pattern Search");
+      int moduleMemorySize = process.MainModule.ModuleMemorySize;
+      Logger.AddLog("Reading Data Source", process.MainModule.ModuleName);
+      IntPtr baseAddress = process.MainModule.BaseAddress;
+      int num1 = <Module>.SetDataSource(process.Id, baseAddress.ToPointer(), moduleMemorySize);
+      Logger.AddLog("Data Source Read bytes", num1.ToString());
+      if (num1 != moduleMemorySize)
+        return false;
+      int num2 = -1;
+      int pos = (int) <Module>.TryFindValue(&num2);
+      Logger.AddLog("Count", num2.ToString());
+      if (num2 != 1)
+        return false;
+      Patch data = new Patch(!API.BetaEditionMode ? fileVersion.ProductVersion : fileVersion.ProductVersion + " p", (long) pos);
+      Settings.Default.patch = new SerializeDeserialize<Patch>().SerializeData(data);
+      Settings.Default.Save();
+      API.SupportedVersions.Add(data.Version, data);
+      return true;
+    }
+
+    public static unsafe PrepareResults PrepareProcess([MarshalAs(UnmanagedType.U1)] bool trial)
+    {
+      Process process1 = (Process) null;
+      bool flag1 = false;
+      Process process2;
+      bool flag2;
+      try
+      {
+        int processId = <Module>.LaunchApp();
+        Process process3 = processId == 0 ? process1 : Process.GetProcessById(processId);
+        process2 = process3;
+        if (API.appId == 0)
+        {
+          API.appId = processId;
+          process3.EnableRaisingEvents = true;
+          process3.Exited += new EventHandler(API.OnExited);
+        }
+        flag2 = process3 != null || flag1;
+      }
+      catch (Exception ex)
+      {
+        Logger.AddError("An Error Occured while starting Minecraft");
+        return PrepareResults.StartError;
+      }
+      if (!flag2)
+      {
+        Logger.AddError("Minecraft Start Failed. Is Minecraft Installed?");
+        return PrepareResults.StartFailed;
+      }
+      FileVersionInfo fileVersionInfo = process2.MainModule.FileVersionInfo;
+      string key = !API.BetaEditionMode ? fileVersionInfo.ProductVersion : fileVersionInfo.ProductVersion + " p";
+      if (!API.IsValidVersion(fileVersionInfo))
+      {
+        Logger.AddLog("Minecraft version is not in known list", Colors.Brown);
+        Logger.AddLog("Using Pattern Mode", Colors.Crimson);
+        Patch patch1 = (Patch) null;
+        string patch2 = Settings.Default.patch;
+        if (patch2 != "nan")
+          patch1 = new SerializeDeserialize<Patch>().DeserializeData(patch2);
+        if (patch1 != null)
+        {
+          if (patch1.Version == key)
+          {
+            Logger.AddLog("Found from disc");
+            API.SupportedVersions.Add(patch1.Version, patch1);
+          }
+          else if (!API.search(process2, fileVersionInfo))
+          {
+            Logger.AddError("Pattern Error, Version Unsupported");
+            return PrepareResults.InvalidVersion;
+          }
+        }
+        else if (!API.search(process2, fileVersionInfo))
+        {
+          Logger.AddError("Pattern Error, Version Unsupported");
+          return PrepareResults.InvalidVersion;
+        }
+        Logger.AddLog("End Pattern Mode", Colors.Crimson);
+      }
+      Patch patch = (Patch) null;
+      API.SupportedVersions.TryGetValue(key, out patch);
+      <Module>.ChangePatchValues(patch.disableTrial, patch.enableTrial, patch.defaultvalue, patch.position);
+      IntPtr baseAddress = process2.MainModule.BaseAddress;
+      switch (<Module>.ModifyApp(process2.Id, baseAddress.ToPointer(), trial, API.ignoreVerification))
+      {
+        case -4:
+        case -3:
+          Logger.AddError("Error Occured While Writing Memory");
+          return PrepareResults.MemoryWriteError;
+        case -2:
+          Logger.AddError("Error Occured While Reading Memory");
+          return PrepareResults.MemoryReadError;
+        case 0:
+          Logger.AddError("Unknown Memory Patterns%nYou may be using unsupported version%nor using other mods");
+          return PrepareResults.MemoryPatternError;
+        case 1:
+          API.ignoreVerification = true;
+          Logger.AddLog("Mode Injection Successful", Colors.Green);
+          return PrepareResults.Success;
+        default:
+          Logger.AddError("Unknown Error Occured");
+          return PrepareResults.UnknownError;
+      }
+    }
+
+    public static unsafe int GetProcess()
+    {
+      Process[] processesByName = Process.GetProcessesByName("Minecraft.Windows");
+      if (processesByName == null)
+        return -1;
+      List<Process> processList = new List<Process>(5);
+      int index = 0;
+      if (0 < processesByName.Length)
+      {
+        do
+        {
+          Process process = processesByName[index];
+          if (API.IsValidVersion(process.MainModule.FileVersionInfo))
+            processList.Add(process);
+          ++index;
+        }
+        while (index < processesByName.Length);
+      }
+      if (processList.Count == 0)
+        return -1;
+      int num = 0;
+      List<Process>.Enumerator enumerator = processList.GetEnumerator();
+      if (enumerator.MoveNext())
+      {
+        Process current;
+        do
+        {
+          current = enumerator.Current;
+          if (!current.HasExited)
+          {
+            IntPtr baseAddress = current.MainModule.BaseAddress;
+            num = <Module>.IsValidApp(current.Id, baseAddress.ToPointer());
+            switch (num)
+            {
+              case -2:
+                goto label_14;
+              case -1:
+                goto label_13;
+              case 1:
+                goto label_12;
+            }
+          }
+        }
+        while (enumerator.MoveNext());
+        goto label_15;
+label_12:
+        current.Kill();
+        return 1;
+label_13:
+        return -2;
+label_14:
+        return -3;
+label_15:
+        switch (num)
+        {
+          case -2:
+            return -3;
+          case -1:
+            return -2;
+          case 0:
+            break;
+          case 1:
+            return 1;
+          default:
+            return 0;
+        }
+      }
+      return 0;
+    }
+
+    [return: MarshalAs(UnmanagedType.U1)]
+    private static bool IsValidVersion(FileVersionInfo info)
+    {
+      string key = !API.BetaEditionMode ? info.ProductVersion : info.ProductVersion + " p";
+      Logger.AddLog("Detected Version: " + info.ProductVersion);
+      return info.ProductName == "Minecraft" && API.SupportedVersions.ContainsKey(key);
+    }
+
+    private static void OnExited(object sender, EventArgs e)
+    {
+      API.ignoreVerification = false;
+      API.appId = 0;
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: Backup\mcenters\Logger.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Windows.Media;
+
+#nullable disable
+namespace mcenters
+{
+  public class Logger
+  {
+    private static bool cleared = true;
+    private static Paragraph <backing_store>Text;
+    private static RichTextBox <backing_store>logger;
+
+    private static Paragraph Text
+    {
+      get => Logger.<backing_store>Text;
+      set => Logger.<backing_store>Text = value;
+    }
+
+    private static RichTextBox logger
+    {
+      get => Logger.<backing_store>logger;
+      set => Logger.<backing_store>logger = value;
+    }
+
+    public static void SetLogControl(RichTextBox box)
+    {
+      Logger.<backing_store>logger = box;
+      Logger.<backing_store>logger.Document.Blocks.Clear();
+      if (Logger.<backing_store>Text == null)
+        Logger.<backing_store>Text = new Paragraph();
+      Paragraph backingStoreText = Logger.<backing_store>Text;
+      Logger.<backing_store>logger.Document.Blocks.Add((Block) backingStoreText);
+    }
+
+    public static void Clear()
+    {
+      Logger.<backing_store>Text.Inlines.Clear();
+      Logger.cleared = true;
+    }
+
+    public static void AddLog(string text, Color color)
+    {
+      if (Logger.<backing_store>logger == null)
+        return;
+      Run run;
+      if (!Logger.cleared)
+      {
+        run = new Run("%n" + text);
+        run.Foreground = (Brush) new SolidColorBrush(color);
+      }
+      else
+      {
+        run = new Run(text);
+        run.Foreground = (Brush) new SolidColorBrush(color);
+        Logger.cleared = false;
+      }
+      Logger.<backing_store>Text.Inlines.Add((Inline) run);
+    }
+
+    public static void AddLog(string text)
+    {
+      Color blue = Colors.Blue;
+      if (Logger.<backing_store>logger == null)
+        return;
+      Run run;
+      if (!Logger.cleared)
+      {
+        run = new Run("%n" + text);
+        run.Foreground = (Brush) new SolidColorBrush(blue);
+      }
+      else
+      {
+        run = new Run(text);
+        run.Foreground = (Brush) new SolidColorBrush(blue);
+        Logger.cleared = false;
+      }
+      Logger.<backing_store>Text.Inlines.Add((Inline) run);
+    }
+
+    public static void AddLog(string field, string value)
+    {
+      Color blue = Colors.Blue;
+      Color black = Colors.Black;
+      Run run1 = new Run("%t%t" + value);
+      run1.Foreground = (Brush) new SolidColorBrush(black);
+      if (Logger.<backing_store>logger == null)
+        return;
+      Run run2;
+      if (!Logger.cleared)
+      {
+        run2 = new Run("%n" + field);
+      }
+      else
+      {
+        run2 = new Run(field);
+        Logger.cleared = false;
+      }
+      FontWeight bold = FontWeights.Bold;
+      run2.FontWeight = bold;
+      run2.Foreground = (Brush) new SolidColorBrush(blue);
+      Logger.<backing_store>Text.Inlines.Add((Inline) run2);
+      Logger.<backing_store>Text.Inlines.Add((Inline) run1);
+    }
+
+    public static void AddError(string text)
+    {
+      if (Logger.<backing_store>logger == null)
+        return;
+      Run run;
+      if (!Logger.cleared)
+      {
+        run = new Run("%n" + text);
+        Color red = Colors.Red;
+        run.Foreground = (Brush) new SolidColorBrush(red);
+      }
+      else
+      {
+        run = new Run(text);
+        Color red = Colors.Red;
+        run.Foreground = (Brush) new SolidColorBrush(red);
+        Logger.cleared = false;
+      }
+      Logger.<backing_store>Text.Inlines.Add((Inline) run);
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: Backup\mcenters\Patch.cs
+Guessed Purpose: Likely contains patching logic for Minecraft
+Content:
+```
+﻿using System;
+
+#nullable disable
+namespace mcenters
+{
+  [Serializable]
+  public class Patch
+  {
+    private string <backing_store>Version;
+    private long <backing_store>disableTrial;
+    public static long DefaultPattern = 4974556687;
+    private long <backing_store>enableTrial;
+    private long <backing_store>defaultvalue;
+    private long <backing_store>position;
+
+    public string Version
+    {
+      get => this.<backing_store>Version;
+      set => this.<backing_store>Version = value;
+    }
+
+    public long disableTrial
+    {
+      get => this.<backing_store>disableTrial;
+      set => this.<backing_store>disableTrial = value;
+    }
+
+    public long enableTrial
+    {
+      get => this.<backing_store>enableTrial;
+      set => this.<backing_store>enableTrial = value;
+    }
+
+    public long defaultvalue
+    {
+      get => this.<backing_store>defaultvalue;
+      set => this.<backing_store>defaultvalue = value;
+    }
+
+    public long position
+    {
+      get => this.<backing_store>position;
+      set => this.<backing_store>position = value;
+    }
+
+    public Patch(string version, long pos)
+    {
+      this.<backing_store>Version = version;
+      this.<backing_store>position = pos;
+      this.<backing_store>disableTrial = 40691344807608369L;
+      this.<backing_store>enableTrial = 40691344824385585L;
+      this.<backing_store>defaultvalue = Patch.DefaultPattern;
+    }
+
+    public Patch(string version, long disable, long enable, long defaultval, long pos)
+    {
+      this.<backing_store>position = pos;
+      this.<backing_store>Version = version;
+      this.<backing_store>disableTrial = disable;
+      this.<backing_store>enableTrial = enable;
+      this.<backing_store>defaultvalue = defaultval;
+    }
+
+    public Patch()
+    {
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: Backup\mcenters\PrepareResults.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿#nullable disable
+namespace mcenters
+{
+  public enum PrepareResults
+  {
+    StartError,
+    StartFailed,
+    InvalidVersion,
+    Success,
+    MemoryReadError,
+    MemoryWriteError,
+    MemoryPatternError,
+    UnknownError,
+  }
+}
+
+```
+--------------------------------------------------
+
+File: Backup\mcenters\SerializeDeserialize`1.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System;
+using System.IO;
+using System.Text;
+using System.Xml;
+using System.Xml.Serialization;
+
+#nullable disable
+namespace mcenters
+{
+  internal class SerializeDeserialize<T>
+  {
+    private StringBuilder sbData;
+    private StringWriter swWriter;
+    private XmlDocument xDoc;
+    private XmlNodeReader xNodeReader;
+    private XmlSerializer xmlSerializer;
+
+    public SerializeDeserialize() => this.sbData = new StringBuilder(500);
+
+    public string SerializeData(T data)
+    {
+      XmlSerializer xmlSerializer = new XmlSerializer(typeof (T));
+      StringWriter stringWriter1 = new StringWriter(this.sbData);
+      this.swWriter = stringWriter1;
+      StringWriter stringWriter2 = stringWriter1;
+      // ISSUE: variable of a boxed type
+      __Boxed<T> o = (object) data;
+      xmlSerializer.Serialize((TextWriter) stringWriter2, (object) o);
+      string str = this.sbData.ToString();
+      GC.KeepAlive((object) this);
+      return str;
+    }
+
+    public T DeserializeData(string dataXML)
+    {
+      XmlDocument xmlDocument = new XmlDocument();
+      this.xDoc = xmlDocument;
+      xmlDocument.LoadXml(dataXML);
+      SerializeDeserialize<T> serializeDeserialize = this;
+      serializeDeserialize.xNodeReader = new XmlNodeReader((XmlNode) serializeDeserialize.xDoc.DocumentElement);
+      XmlSerializer xmlSerializer = new XmlSerializer(typeof (T));
+      this.xmlSerializer = xmlSerializer;
+      T obj = (T) xmlSerializer.Deserialize((XmlReader) this.xNodeReader);
+      GC.KeepAlive((object) this);
+      return obj;
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: Backup\mcenters\Settings.cs
+Guessed Purpose: Configuration or settings management
+Content:
+```
+﻿using System.Collections.Generic;
+using System.Configuration;
+using System.Reflection;
+
+#nullable disable
+namespace mcenters
+{
+  [DefaultMember("Item")]
+  internal class Settings : ApplicationSettingsBase
+  {
+    private static Settings defaultInstance = (Settings) SettingsBase.Synchronized((SettingsBase) new Settings());
+    private Dictionary<string, SettingsPropertyValue> Dic;
+
+    public Settings()
+      : base("Data")
+    {
+    }
+
+    public void LoadDic()
+    {
+    }
+
+    public static Settings Default => Settings.defaultInstance;
+
+    [DefaultSettingValue("nan")]
+    [UserScopedSetting]
+    public string patch
+    {
+      get => (string) this[nameof (patch)];
+      set => this["Patch"] = (object) value;
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: Backup\M_Centers\App.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿// Decompiled with JetBrains decompiler
+// Type: M_Centers.App
+// Assembly: MCenters, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: 45CFC87E-86C0-4035-8A46-F8737ED6CA8B
+// Assembly location: C:\Users\Misi\Downloads\akshnav_3.exe
+
+using mcenters;
+using System;
+using System.IO;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Markup;
+
+#nullable disable
+namespace M_Centers
+{
+  public class App : Application
+  {
+    public static Stream x;
+    public static M_Centers.MainWindow win;
+
+    public void InitializeComponent()
+    {
+      App.x = Application.ResourceAssembly.GetManifestResourceStream("mainwindow.xaml");
+      this.action2();
+    }
+
+    [STAThread]
+    public static void action()
+    {
+    }
+
+    [STAThread]
+    public void action2()
+    {
+      API.EnableDebug();
+      Page p = (Page) XamlReader.Load(App.x);
+      App.win = new M_Centers.MainWindow(p);
+      p.GetType();
+    }
+
+    public static void mainlogic()
+    {
+      App app = new App();
+      app.InitializeComponent();
+      if (App.win == null)
+      {
+        do
+        {
+          Task.Delay(500).Wait();
+        }
+        while (App.win == null);
+      }
+      try
+      {
+        App.x.Close();
+      }
+      catch (InvalidOperationException ex)
+      {
+      }
+      app.Run((Window) App.win);
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: Backup\M_Centers\MainWindow.cs
+Guessed Purpose: UI definition or code-behind for the app window
+Content:
+```
+﻿// Decompiled with JetBrains decompiler
+// Type: M_Centers.MainWindow
+// Assembly: MCenters, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: 45CFC87E-86C0-4035-8A46-F8737ED6CA8B
+// Assembly location: C:\Users\Misi\Downloads\akshnav_3.exe
+
+using mcenters;
+using Microsoft.Win32;
+using System;
+using System.Diagnostics;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
+using System.Windows.Input;
+using System.Windows.Media;
+
+#nullable disable
+namespace M_Centers
+{
+  public class MainWindow : Window
+  {
+    internal CheckBox trialBox;
+    internal RichTextBox outputBox;
+    private bool _contentLoaded;
+    public Button InjectButton;
+    public RadioButton MinecraftReleaseRadioButton;
+    public RadioButton MinecraftBetaRadioButton;
+    private bool trial = false;
+
+    public void InitializeComponent()
+    {
+      if (this._contentLoaded)
+        return;
+      this._contentLoaded = true;
+      Application.LoadComponent((object) this, new Uri("/MCenters;component/mainwindow.xaml", UriKind.Relative));
+    }
+
+    public MainWindow(Page p)
+    {
+      this.ResizeMode = ResizeMode.CanMinimize;
+      this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+      this.Background = (Brush) null;
+      this.WindowStyle = WindowStyle.None;
+      this.AllowsTransparency = true;
+      this.Title = "Akshnav";
+      this.Height = 584.0;
+      this.Width = 757.0;
+      this.Content = (object) p;
+      this.MinecraftReleaseRadioButton = (RadioButton) p.FindName("minecraftReleaseRadioButton");
+      this.MinecraftReleaseRadioButton.Checked += new RoutedEventHandler(this.ReleaseModeSelected);
+      this.MinecraftBetaRadioButton = (RadioButton) p.FindName("minecraftBetaRadioButton");
+      this.MinecraftBetaRadioButton.Checked += new RoutedEventHandler(this.BetaModeSelected);
+      ((UIElement) p.FindName("rootGrid")).MouseDown += new MouseButtonEventHandler(this.Grid_MouseDown);
+      Button name1 = (Button) p.FindName(nameof (InjectButton));
+      name1.Click += new RoutedEventHandler(this.Button_Click);
+      this.InjectButton = name1;
+      TextBlock name2 = (TextBlock) p.FindName("closeButton");
+      name2.MouseDown += new MouseButtonEventHandler(this.TextBlock_MouseDown);
+      name2.MouseEnter += new MouseEventHandler(this.TextBlock_MouseEnter);
+      name2.MouseLeave += new MouseEventHandler(this.TextBlock_MouseLeave);
+      this.trialBox = (CheckBox) p.FindName(nameof (trialBox));
+      this.trialBox.Checked += new RoutedEventHandler(this.CheckBox_Checked);
+      this.trialBox.Unchecked += new RoutedEventHandler(this.CheckBox_Unchecked);
+      this.outputBox = (RichTextBox) p.FindName(nameof (outputBox));
+      Settings settings = Settings.Default;
+      ((ButtonBase) p.FindName("ClipSVCButton")).Click += new RoutedEventHandler(this.ClipSvcButton_Click);
+      ((ButtonBase) p.FindName("ContactButton")).Click += new RoutedEventHandler(this.ContactButton_Click);
+      ((TextBlock) p.FindName("VersionBox")).Text = "Version " + Process.GetCurrentProcess().MainModule.FileVersionInfo.ProductVersion;
+      API.SetupVersionList();
+      Logger.SetLogControl(this.outputBox);
+      string[] commandLineArgs = Environment.GetCommandLineArgs();
+      if (commandLineArgs == null)
+        return;
+      string str = (string) null;
+      if (commandLineArgs.Length > 1)
+        str = commandLineArgs[1];
+      if (string.IsNullOrEmpty(str))
+        return;
+      if (str == "trial-enable")
+      {
+        this.trial = true;
+        this.trialBox.IsChecked = (bool?) true;
+        this.PerformHack();
+      }
+      if (!(str == "trial-disable"))
+        return;
+      this.trial = false;
+      this.trialBox.IsChecked = (bool?) false;
+      this.PerformHack();
+    }
+
+    private void ReleaseModeSelected(object sender, RoutedEventArgs e)
+    {
+      API.ShouldOpenBetaEdition(false);
+      GC.KeepAlive((object) this);
+    }
+
+    private void BetaModeSelected(object sender, RoutedEventArgs e)
+    {
+      API.ShouldOpenBetaEdition(true);
+      GC.KeepAlive((object) this);
+    }
+
+    private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+    {
+      Environment.Exit(0);
+      GC.KeepAlive((object) this);
+    }
+
+    private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
+    {
+      TextBlock textBlock = (TextBlock) sender;
+      textBlock.Background = (Brush) null;
+      Color red = Colors.Red;
+      textBlock.Foreground = (Brush) new SolidColorBrush(red);
+      FontWeight extraBold = FontWeights.ExtraBold;
+      textBlock.FontWeight = extraBold;
+      GC.KeepAlive((object) this);
+    }
+
+    private void TextBlock_MouseLeave(object sender, MouseEventArgs e)
+    {
+      TextBlock textBlock = (TextBlock) sender;
+      Color black = Colors.Black;
+      textBlock.Foreground = (Brush) new SolidColorBrush(black);
+      Color red = Colors.Red;
+      textBlock.Background = (Brush) new SolidColorBrush(red);
+      FontWeight bold = FontWeights.Bold;
+      textBlock.FontWeight = bold;
+      GC.KeepAlive((object) this);
+    }
+
+    private void PerformHack()
+    {
+      Logger.Clear();
+      if (this.trial)
+        Logger.AddLog("Selected Minecraft Mode = Enable Trial");
+      else
+        Logger.AddLog("Selected Minecraft Mode = Enable Full Game");
+      int num = (int) API.PrepareProcess(this.trial);
+      GC.KeepAlive((object) this);
+    }
+
+    private void Button_Click(object sender, RoutedEventArgs e) => this.PerformHack();
+
+    private void ContactButton_Click(object sender, RoutedEventArgs e)
+    {
+      Logger.AddLog("Opening Link", Colors.Goldenrod);
+      if (Process.Start("https://x.com/tinedpakgamer") == null)
+        Logger.AddLog("Failed to Open", Colors.Red);
+      else
+        Logger.AddLog("Link Opened", Colors.Green);
+      GC.KeepAlive((object) this);
+    }
+
+    private void ClipSvcButton_Click(object sender, RoutedEventArgs e)
+    {
+      Logger.AddLog("Fixing ClipSvc", Colors.Goldenrod);
+      try
+      {
+        RegistryKey registryKey = Registry.LocalMachine.OpenSubKey("SYSTEM\\CurrentControlSet\\Services\\ClipSVC\\Parameters", true);
+        registryKey.SetValue("ServiceDll", (object) "%SystemRoot%\\System32\\ClipSVC.dll", RegistryValueKind.ExpandString);
+        registryKey.Close();
+        Logger.AddLog("ClipSvc fixed successfully", Colors.Green);
+      }
+      catch (Exception ex)
+      {
+        Color red = Colors.Red;
+        int hresult = ex.HResult;
+        Logger.AddLog(ex.Message + "\nThe error code is " + hresult.ToString() + "\nThe source is " + ex.Source, red);
+      }
+      GC.KeepAlive((object) this);
+    }
+
+    private void CheckBox_Checked(object sender, RoutedEventArgs e) => this.trial = true;
+
+    private void CheckBox_Unchecked(object sender, RoutedEventArgs e) => this.trial = false;
+
+    private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+    {
+      if (e.LeftButton != MouseButtonState.Pressed)
+        return;
+      this.DragMove();
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: Backup\_003CCppImplementationDetails_003E\$ArrayType$$$BY00Q6MPEBXXZ.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+namespace <CppImplementationDetails>
+{
+  [NativeCppClass]
+  [StructLayout(LayoutKind.Sequential, Size = 8)]
+  internal struct $ArrayType$$$BY00Q6MPEBXXZ
+  {
+  }
+}
+
+```
+--------------------------------------------------
+
+File: Backup\_003CCppImplementationDetails_003E\$ArrayType$$$BY0A@P6AHXZ.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+namespace <CppImplementationDetails>
+{
+  [NativeCppClass]
+  [StructLayout(LayoutKind.Sequential, Size = 1)]
+  internal struct $ArrayType$$$BY0A@P6AHXZ
+  {
+  }
+}
+
+```
+--------------------------------------------------
+
+File: Backup\_003CCppImplementationDetails_003E\$ArrayType$$$BY0A@P6AXXZ.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+namespace <CppImplementationDetails>
+{
+  [NativeCppClass]
+  [StructLayout(LayoutKind.Sequential, Size = 1)]
+  internal struct $ArrayType$$$BY0A@P6AXXZ
+  {
+  }
+}
+
+```
+--------------------------------------------------
+
+File: Backup\_003CCrtImplementationDetails_003E\LanguageSupport.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+namespace <CrtImplementationDetails>
+{
+  [NativeCppClass]
+  [StructLayout(LayoutKind.Sequential, Size = 8)]
+  internal struct LanguageSupport
+  {
+    private long <alignment member>;
+  }
+}
+```
+--------------------------------------------------
+
+File: Backup\_003CCrtImplementationDetails_003E\ModuleLoadException.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System;
+using System.Runtime.Serialization;
+
+#nullable disable
+namespace <CrtImplementationDetails>
+{
+  [Serializable]
+  internal class ModuleLoadException : Exception
+  {
+    public const string Nested = "A nested exception occurred after the primary exception that caused the C++ module to fail to load.%n";
+
+    protected ModuleLoadException(SerializationInfo info, StreamingContext context)
+      : base(info, context)
+    {
+    }
+
+    public ModuleLoadException(string message, Exception innerException)
+      : base(message, innerException)
+    {
+    }
+
+    public ModuleLoadException(string message)
+      : base(message)
+    {
+    }
+  }
+}
+```
+--------------------------------------------------
+
+File: Backup\_003CCrtImplementationDetails_003E\ModuleLoadExceptionHandlerException.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System;
+using System.Runtime.Serialization;
+using System.Security;
+
+#nullable disable
+namespace <CrtImplementationDetails>
+{
+  [Serializable]
+  internal class ModuleLoadExceptionHandlerException : ModuleLoadException
+  {
+    private const string formatString = "%n{0}: {1}%n--- Start of primary exception ---%n{2}%n--- End of primary exception ---%n%n--- Start of nested exception ---%n{3}%n--- End of nested exception ---%n";
+    private Exception <backing_store>NestedException;
+
+    protected ModuleLoadExceptionHandlerException(SerializationInfo info, StreamingContext context)
+      : base(info, context)
+    {
+      Type type = typeof (Exception);
+      string name = nameof (NestedException);
+      this.NestedException = (Exception) info.GetValue(name, type);
+      GC.KeepAlive((object) this);
+    }
+
+    public ModuleLoadExceptionHandlerException(
+      string message,
+      Exception innerException,
+      Exception nestedException)
+      : base(message, innerException)
+    {
+      this.NestedException = nestedException;
+    }
+
+    public Exception NestedException
+    {
+      get => this.<backing_store>NestedException;
+      set => this.<backing_store>NestedException = value;
+    }
+
+    public override string ToString()
+    {
+      string str1 = this.InnerException == null ? string.Empty : this.InnerException.ToString();
+      string str2 = this.NestedException == null ? string.Empty : this.NestedException.ToString();
+      object[] objArray = new object[4];
+      Type type = this.GetType();
+      objArray[0] = (object) type;
+      string str3 = this.Message == null ? string.Empty : this.Message;
+      objArray[1] = (object) str3;
+      string str4 = str1 == null ? string.Empty : str1;
+      objArray[2] = (object) str4;
+      string str5 = str2 == null ? string.Empty : str2;
+      objArray[3] = (object) str5;
+      string str6 = string.Format("%n{0}: {1}%n--- Start of primary exception ---%n{2}%n--- End of primary exception ---%n%n--- Start of nested exception ---%n{3}%n--- End of nested exception ---%n", objArray);
+      GC.KeepAlive((object) this);
+      return str6;
+    }
+
+    [SecurityCritical]
+    public override void GetObjectData(SerializationInfo info, StreamingContext context)
+    {
+      base.GetObjectData(info, context);
+      Type type = typeof (Exception);
+      Exception nestedException = this.NestedException;
+      info.AddValue("NestedException", (object) nestedException, type);
+      GC.KeepAlive((object) this);
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: Backup\_003CCrtImplementationDetails_003E\ModuleUninitializer.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System;
+using System.Collections;
+using System.Runtime.CompilerServices;
+using System.Runtime.ConstrainedExecution;
+using System.Security;
+using System.Threading;
+
+#nullable disable
+namespace <CrtImplementationDetails>
+{
+  internal class ModuleUninitializer : Stack
+  {
+    private static object @lock = new object();
+    internal static ModuleUninitializer _ModuleUninitializer = new ModuleUninitializer();
+
+    [SecuritySafeCritical]
+    internal void AddHandler(EventHandler handler)
+    {
+      bool lockTaken = false;
+      RuntimeHelpers.PrepareConstrainedRegions();
+      try
+      {
+        RuntimeHelpers.PrepareConstrainedRegions();
+        Monitor.Enter(ModuleUninitializer.@lock, ref lockTaken);
+        RuntimeHelpers.PrepareDelegate((Delegate) handler);
+        this.Push((object) handler);
+      }
+      finally
+      {
+        if (lockTaken)
+          Monitor.Exit(ModuleUninitializer.@lock);
+      }
+    }
+
+    [SecurityCritical]
+    static ModuleUninitializer()
+    {
+    }
+
+    [SecuritySafeCritical]
+    private ModuleUninitializer()
+    {
+      EventHandler eventHandler = new EventHandler(this.SingletonDomainUnload);
+      AppDomain.CurrentDomain.DomainUnload += eventHandler;
+      AppDomain.CurrentDomain.ProcessExit += eventHandler;
+    }
+
+    [SecurityCritical]
+    [PrePrepareMethod]
+    private void SingletonDomainUnload(object source, EventArgs arguments)
+    {
+      bool lockTaken = false;
+      RuntimeHelpers.PrepareConstrainedRegions();
+      try
+      {
+        RuntimeHelpers.PrepareConstrainedRegions();
+        Monitor.Enter(ModuleUninitializer.@lock, ref lockTaken);
+        foreach (EventHandler eventHandler in (Stack) this)
+          eventHandler(source, arguments);
+      }
+      finally
+      {
+        if (lockTaken)
+          Monitor.Exit(ModuleUninitializer.@lock);
+      }
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: Backup\_003CCrtImplementationDetails_003E\Progress.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+
+#nullable disable
+namespace <CrtImplementationDetails>
+{
+  [NativeCppClass]
+  internal enum Progress
+  {
+  }
+}
+
+```
+--------------------------------------------------
+
+File: Backup\_003CCrtImplementationDetails_003E\ThisModule.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+namespace <CrtImplementationDetails>
+{
+  [NativeCppClass]
+  [StructLayout(LayoutKind.Sequential, Size = 1)]
+  internal struct ThisModule
+  {
+  }
+}
+
+```
+--------------------------------------------------
+
+File: Backup\_003CCrtImplementationDetails_003E\TriBool.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+
+#nullable disable
+namespace <CrtImplementationDetails>
+{
+  [NativeCppClass]
+  internal enum TriBool
+  {
+  }
+}
+
+```
+--------------------------------------------------
+
+File: mcenters\API.cs
+Guessed Purpose: Handles external interactions or APIs
+Content:
+```
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+using System.Windows.Media;
+
+#nullable disable
+namespace mcenters
+{
+  public class API
+  {
+    public static bool BetaEditionMode = false;
+    private static Dictionary<string, Patch> SupportedVersions;
+    private static bool ignoreVerification = false;
+    private static int appId = 0;
+
+    public static void SetupVersionList()
+    {
+      API.SupportedVersions = new Dictionary<string, Patch>(10);
+      API.SupportedVersions.Add("1.19.41.01", new Patch("1.19.41.01", 40691344807608369L, 40691344824385585L, 4974556687L, 14621280L));
+      API.SupportedVersions.Add("1.19.51.011", new Patch("1.19.51.011", 40691344807608369L, 40691344824385585L, 4974556687L, 14600288L));
+    }
+
+    public static void ShouldOpenBetaEdition([MarshalAs(UnmanagedType.U1)] bool val)
+    {
+      API.BetaEditionMode = val;
+      <Module>.IsBetaEditionTarget(val);
+    }
+
+    public static int Test() => 1;
+
+    public static int EnableDebug() => <Module>.EnableDebugPriv();
+
+    [return: MarshalAs(UnmanagedType.U1)]
+    private static unsafe bool search(Process process, FileVersionInfo fileVersion)
+    {
+      Logger.AddLog("Trying Pattern Search");
+      int moduleMemorySize = process.MainModule.ModuleMemorySize;
+      Logger.AddLog("Reading Data Source", process.MainModule.ModuleName);
+      IntPtr baseAddress = process.MainModule.BaseAddress;
+      int num1 = <Module>.SetDataSource(process.Id, baseAddress.ToPointer(), moduleMemorySize);
+      Logger.AddLog("Data Source Read bytes", num1.ToString());
+      if (num1 != moduleMemorySize)
+        return false;
+      int num2 = -1;
+      int pos = (int) <Module>.TryFindValue(&num2);
+      Logger.AddLog("Count", num2.ToString());
+      if (num2 != 1)
+        return false;
+      Patch data = new Patch(!API.BetaEditionMode ? fileVersion.ProductVersion : fileVersion.ProductVersion + " p", (long) pos);
+      Settings.Default.patch = new SerializeDeserialize<Patch>().SerializeData(data);
+      Settings.Default.Save();
+      API.SupportedVersions.Add(data.Version, data);
+      return true;
+    }
+
+    public static unsafe PrepareResults PrepareProcess([MarshalAs(UnmanagedType.U1)] bool trial)
+    {
+      Process process1 = (Process) null;
+      bool flag1 = false;
+      Process process2;
+      bool flag2;
+      try
+      {
+        int processId = <Module>.LaunchApp();
+        Process process3 = processId == 0 ? process1 : Process.GetProcessById(processId);
+        process2 = process3;
+        if (API.appId == 0)
+        {
+          API.appId = processId;
+          process3.EnableRaisingEvents = true;
+          process3.Exited += new EventHandler(API.OnExited);
+        }
+        flag2 = process3 != null || flag1;
+      }
+      catch (Exception ex)
+      {
+        Logger.AddError("An Error Occured while starting Minecraft");
+        return PrepareResults.StartError;
+      }
+      if (!flag2)
+      {
+        Logger.AddError("Minecraft Start Failed. Is Minecraft Installed?");
+        return PrepareResults.StartFailed;
+      }
+      FileVersionInfo fileVersionInfo = process2.MainModule.FileVersionInfo;
+      string key = !API.BetaEditionMode ? fileVersionInfo.ProductVersion : fileVersionInfo.ProductVersion + " p";
+      if (!API.IsValidVersion(fileVersionInfo))
+      {
+        Logger.AddLog("Minecraft version is not in known list", Colors.Brown);
+        Logger.AddLog("Using Pattern Mode", Colors.Crimson);
+        Patch patch1 = (Patch) null;
+        string patch2 = Settings.Default.patch;
+        if (patch2 != "nan")
+          patch1 = new SerializeDeserialize<Patch>().DeserializeData(patch2);
+        if (patch1 != null)
+        {
+          if (patch1.Version == key)
+          {
+            Logger.AddLog("Found from disc");
+            API.SupportedVersions.Add(patch1.Version, patch1);
+          }
+          else if (!API.search(process2, fileVersionInfo))
+          {
+            Logger.AddError("Pattern Error, Version Unsupported");
+            return PrepareResults.InvalidVersion;
+          }
+        }
+        else if (!API.search(process2, fileVersionInfo))
+        {
+          Logger.AddError("Pattern Error, Version Unsupported");
+          return PrepareResults.InvalidVersion;
+        }
+        Logger.AddLog("End Pattern Mode", Colors.Crimson);
+      }
+      Patch patch = (Patch) null;
+      API.SupportedVersions.TryGetValue(key, out patch);
+      <Module>.ChangePatchValues(patch.disableTrial, patch.enableTrial, patch.defaultvalue, patch.position);
+      IntPtr baseAddress = process2.MainModule.BaseAddress;
+      switch (<Module>.ModifyApp(process2.Id, baseAddress.ToPointer(), trial, API.ignoreVerification))
+      {
+        case -4:
+        case -3:
+          Logger.AddError("Error Occured While Writing Memory");
+          return PrepareResults.MemoryWriteError;
+        case -2:
+          Logger.AddError("Error Occured While Reading Memory");
+          return PrepareResults.MemoryReadError;
+        case 0:
+          Logger.AddError("Unknown Memory Patterns%nYou may be using unsupported version%nor using other mods");
+          return PrepareResults.MemoryPatternError;
+        case 1:
+          API.ignoreVerification = true;
+          Logger.AddLog("Mode Injection Successful", Colors.Green);
+          return PrepareResults.Success;
+        default:
+          Logger.AddError("Unknown Error Occured");
+          return PrepareResults.UnknownError;
+      }
+    }
+
+    public static unsafe int GetProcess()
+    {
+      Process[] processesByName = Process.GetProcessesByName("Minecraft.Windows");
+      if (processesByName == null)
+        return -1;
+      List<Process> processList = new List<Process>(5);
+      int index = 0;
+      if (0 < processesByName.Length)
+      {
+        do
+        {
+          Process process = processesByName[index];
+          if (API.IsValidVersion(process.MainModule.FileVersionInfo))
+            processList.Add(process);
+          ++index;
+        }
+        while (index < processesByName.Length);
+      }
+      if (processList.Count == 0)
+        return -1;
+      int num = 0;
+      List<Process>.Enumerator enumerator = processList.GetEnumerator();
+      if (enumerator.MoveNext())
+      {
+        Process current;
+        do
+        {
+          current = enumerator.Current;
+          if (!current.HasExited)
+          {
+            IntPtr baseAddress = current.MainModule.BaseAddress;
+            num = <Module>.IsValidApp(current.Id, baseAddress.ToPointer());
+            switch (num)
+            {
+              case -2:
+                goto label_14;
+              case -1:
+                goto label_13;
+              case 1:
+                goto label_12;
+            }
+          }
+        }
+        while (enumerator.MoveNext());
+        goto label_15;
+label_12:
+        current.Kill();
+        return 1;
+label_13:
+        return -2;
+label_14:
+        return -3;
+label_15:
+        switch (num)
+        {
+          case -2:
+            return -3;
+          case -1:
+            return -2;
+          case 0:
+            break;
+          case 1:
+            return 1;
+          default:
+            return 0;
+        }
+      }
+      return 0;
+    }
+
+    [return: MarshalAs(UnmanagedType.U1)]
+    private static bool IsValidVersion(FileVersionInfo info)
+    {
+      string key = !API.BetaEditionMode ? info.ProductVersion : info.ProductVersion + " p";
+      Logger.AddLog("Detected Version: " + info.ProductVersion);
+      return info.ProductName == "Minecraft" && API.SupportedVersions.ContainsKey(key);
+    }
+
+    private static void OnExited(object sender, EventArgs e)
+    {
+      API.ignoreVerification = false;
+      API.appId = 0;
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: mcenters\Logger.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Windows.Media;
+
+#nullable disable
+namespace mcenters
+{
+  public class Logger
+  {
+    private static bool cleared = true;
+    private static Paragraph <backing_store>Text;
+    private static RichTextBox <backing_store>logger;
+
+    private static Paragraph Text
+    {
+      get => Logger.<backing_store>Text;
+      set => Logger.<backing_store>Text = value;
+    }
+
+    private static RichTextBox logger
+    {
+      get => Logger.<backing_store>logger;
+      set => Logger.<backing_store>logger = value;
+    }
+
+    public static void SetLogControl(RichTextBox box)
+    {
+      Logger.<backing_store>logger = box;
+      Logger.<backing_store>logger.Document.Blocks.Clear();
+      if (Logger.<backing_store>Text == null)
+        Logger.<backing_store>Text = new Paragraph();
+      Paragraph backingStoreText = Logger.<backing_store>Text;
+      Logger.<backing_store>logger.Document.Blocks.Add((Block) backingStoreText);
+    }
+
+    public static void Clear()
+    {
+      Logger.<backing_store>Text.Inlines.Clear();
+      Logger.cleared = true;
+    }
+
+    public static void AddLog(string text, Color color)
+    {
+      if (Logger.<backing_store>logger == null)
+        return;
+      Run run;
+      if (!Logger.cleared)
+      {
+        run = new Run("%n" + text);
+        run.Foreground = (Brush) new SolidColorBrush(color);
+      }
+      else
+      {
+        run = new Run(text);
+        run.Foreground = (Brush) new SolidColorBrush(color);
+        Logger.cleared = false;
+      }
+      Logger.<backing_store>Text.Inlines.Add((Inline) run);
+    }
+
+    public static void AddLog(string text)
+    {
+      Color blue = Colors.Blue;
+      if (Logger.<backing_store>logger == null)
+        return;
+      Run run;
+      if (!Logger.cleared)
+      {
+        run = new Run("%n" + text);
+        run.Foreground = (Brush) new SolidColorBrush(blue);
+      }
+      else
+      {
+        run = new Run(text);
+        run.Foreground = (Brush) new SolidColorBrush(blue);
+        Logger.cleared = false;
+      }
+      Logger.<backing_store>Text.Inlines.Add((Inline) run);
+    }
+
+    public static void AddLog(string field, string value)
+    {
+      Color blue = Colors.Blue;
+      Color black = Colors.Black;
+      Run run1 = new Run("%t%t" + value);
+      run1.Foreground = (Brush) new SolidColorBrush(black);
+      if (Logger.<backing_store>logger == null)
+        return;
+      Run run2;
+      if (!Logger.cleared)
+      {
+        run2 = new Run("%n" + field);
+      }
+      else
+      {
+        run2 = new Run(field);
+        Logger.cleared = false;
+      }
+      FontWeight bold = FontWeights.Bold;
+      run2.FontWeight = bold;
+      run2.Foreground = (Brush) new SolidColorBrush(blue);
+      Logger.<backing_store>Text.Inlines.Add((Inline) run2);
+      Logger.<backing_store>Text.Inlines.Add((Inline) run1);
+    }
+
+    public static void AddError(string text)
+    {
+      if (Logger.<backing_store>logger == null)
+        return;
+      Run run;
+      if (!Logger.cleared)
+      {
+        run = new Run("%n" + text);
+        Color red = Colors.Red;
+        run.Foreground = (Brush) new SolidColorBrush(red);
+      }
+      else
+      {
+        run = new Run(text);
+        Color red = Colors.Red;
+        run.Foreground = (Brush) new SolidColorBrush(red);
+        Logger.cleared = false;
+      }
+      Logger.<backing_store>Text.Inlines.Add((Inline) run);
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: mcenters\Patch.cs
+Guessed Purpose: Likely contains patching logic for Minecraft
+Content:
+```
+﻿using System;
+
+#nullable disable
+namespace mcenters
+{
+  [Serializable]
+  public class Patch
+  {
+    private string <backing_store>Version;
+    private long <backing_store>disableTrial;
+    public static long DefaultPattern = 4974556687;
+    private long <backing_store>enableTrial;
+    private long <backing_store>defaultvalue;
+    private long <backing_store>position;
+
+    public string Version
+    {
+      get => this.<backing_store>Version;
+      set => this.<backing_store>Version = value;
+    }
+
+    public long disableTrial
+    {
+      get => this.<backing_store>disableTrial;
+      set => this.<backing_store>disableTrial = value;
+    }
+
+    public long enableTrial
+    {
+      get => this.<backing_store>enableTrial;
+      set => this.<backing_store>enableTrial = value;
+    }
+
+    public long defaultvalue
+    {
+      get => this.<backing_store>defaultvalue;
+      set => this.<backing_store>defaultvalue = value;
+    }
+
+    public long position
+    {
+      get => this.<backing_store>position;
+      set => this.<backing_store>position = value;
+    }
+
+    public Patch(string version, long pos)
+    {
+      this.<backing_store>Version = version;
+      this.<backing_store>position = pos;
+      this.<backing_store>disableTrial = 40691344807608369L;
+      this.<backing_store>enableTrial = 40691344824385585L;
+      this.<backing_store>defaultvalue = Patch.DefaultPattern;
+    }
+
+    public Patch(string version, long disable, long enable, long defaultval, long pos)
+    {
+      this.<backing_store>position = pos;
+      this.<backing_store>Version = version;
+      this.<backing_store>disableTrial = disable;
+      this.<backing_store>enableTrial = enable;
+      this.<backing_store>defaultvalue = defaultval;
+    }
+
+    public Patch()
+    {
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: mcenters\PrepareResults.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿#nullable disable
+namespace mcenters
+{
+  public enum PrepareResults
+  {
+    StartError,
+    StartFailed,
+    InvalidVersion,
+    Success,
+    MemoryReadError,
+    MemoryWriteError,
+    MemoryPatternError,
+    UnknownError,
+  }
+}
+
+```
+--------------------------------------------------
+
+File: mcenters\SerializeDeserialize`1.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System;
+using System.IO;
+using System.Text;
+using System.Xml;
+using System.Xml.Serialization;
+
+#nullable disable
+namespace mcenters
+{
+  internal class SerializeDeserialize<T>
+  {
+    private StringBuilder sbData;
+    private StringWriter swWriter;
+    private XmlDocument xDoc;
+    private XmlNodeReader xNodeReader;
+    private XmlSerializer xmlSerializer;
+
+    public SerializeDeserialize() => this.sbData = new StringBuilder(500);
+
+    public string SerializeData(T data)
+    {
+      XmlSerializer xmlSerializer = new XmlSerializer(typeof (T));
+      StringWriter stringWriter1 = new StringWriter(this.sbData);
+      this.swWriter = stringWriter1;
+      StringWriter stringWriter2 = stringWriter1;
+      // ISSUE: variable of a boxed type
+      __Boxed<T> o = (object) data;
+      xmlSerializer.Serialize((TextWriter) stringWriter2, (object) o);
+      string str = this.sbData.ToString();
+      GC.KeepAlive((object) this);
+      return str;
+    }
+
+    public T DeserializeData(string dataXML)
+    {
+      XmlDocument xmlDocument = new XmlDocument();
+      this.xDoc = xmlDocument;
+      xmlDocument.LoadXml(dataXML);
+      SerializeDeserialize<T> serializeDeserialize = this;
+      serializeDeserialize.xNodeReader = new XmlNodeReader((XmlNode) serializeDeserialize.xDoc.DocumentElement);
+      XmlSerializer xmlSerializer = new XmlSerializer(typeof (T));
+      this.xmlSerializer = xmlSerializer;
+      T obj = (T) xmlSerializer.Deserialize((XmlReader) this.xNodeReader);
+      GC.KeepAlive((object) this);
+      return obj;
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: mcenters\Settings.cs
+Guessed Purpose: Configuration or settings management
+Content:
+```
+﻿using System.Collections.Generic;
+using System.Configuration;
+using System.Reflection;
+
+#nullable disable
+namespace mcenters
+{
+  [DefaultMember("Item")]
+  internal class Settings : ApplicationSettingsBase
+  {
+    private static Settings defaultInstance = (Settings) SettingsBase.Synchronized((SettingsBase) new Settings());
+    private Dictionary<string, SettingsPropertyValue> Dic;
+
+    public Settings()
+      : base("Data")
+    {
+    }
+
+    public void LoadDic()
+    {
+    }
+
+    public static Settings Default => Settings.defaultInstance;
+
+    [DefaultSettingValue("nan")]
+    [UserScopedSetting]
+    public string patch
+    {
+      get => (string) this[nameof (patch)];
+      set => this["Patch"] = (object) value;
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: M_Centers\App.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿// Decompiled with JetBrains decompiler
+// Type: M_Centers.App
+// Assembly: MCenters, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: 45CFC87E-86C0-4035-8A46-F8737ED6CA8B
+// Assembly location: C:\Users\Misi\Downloads\akshnav_3.exe
+
+using mcenters;
+using System;
+using System.IO;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Markup;
+
+#nullable disable
+namespace M_Centers
+{
+  public class App : Application
+  {
+    public static Stream x;
+    public static M_Centers.MainWindow win;
+
+    public void InitializeComponent()
+    {
+      App.x = Application.ResourceAssembly.GetManifestResourceStream("mainwindow.xaml");
+      this.action2();
+    }
+
+    [STAThread]
+    public static void action()
+    {
+    }
+
+    [STAThread]
+    public void action2()
+    {
+      API.EnableDebug();
+      Page p = (Page) XamlReader.Load(App.x);
+      App.win = new M_Centers.MainWindow(p);
+      p.GetType();
+    }
+
+    public static void mainlogic()
+    {
+      App app = new App();
+      app.InitializeComponent();
+      if (App.win == null)
+      {
+        do
+        {
+          Task.Delay(500).Wait();
+        }
+        while (App.win == null);
+      }
+      try
+      {
+        App.x.Close();
+      }
+      catch (InvalidOperationException ex)
+      {
+      }
+      app.Run((Window) App.win);
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: M_Centers\MainWindow.cs
+Guessed Purpose: UI definition or code-behind for the app window
+Content:
+```
+﻿// Decompiled with JetBrains decompiler
+// Type: M_Centers.MainWindow
+// Assembly: MCenters, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: 45CFC87E-86C0-4035-8A46-F8737ED6CA8B
+// Assembly location: C:\Users\Misi\Downloads\akshnav_3.exe
+
+using mcenters;
+using Microsoft.Win32;
+using System;
+using System.Diagnostics;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
+using System.Windows.Input;
+using System.Windows.Media;
+
+#nullable disable
+namespace M_Centers
+{
+  public class MainWindow : Window
+  {
+    internal CheckBox trialBox;
+    internal RichTextBox outputBox;
+    private bool _contentLoaded;
+    public Button InjectButton;
+    public RadioButton MinecraftReleaseRadioButton;
+    public RadioButton MinecraftBetaRadioButton;
+    private bool trial = false;
+
+    public void InitializeComponent()
+    {
+      if (this._contentLoaded)
+        return;
+      this._contentLoaded = true;
+      Application.LoadComponent((object) this, new Uri("/MCenters;component/mainwindow.xaml", UriKind.Relative));
+    }
+
+    public MainWindow(Page p)
+    {
+      this.ResizeMode = ResizeMode.CanMinimize;
+      this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+      this.Background = (Brush) null;
+      this.WindowStyle = WindowStyle.None;
+      this.AllowsTransparency = true;
+      this.Title = "Akshnav";
+      this.Height = 584.0;
+      this.Width = 757.0;
+      this.Content = (object) p;
+      this.MinecraftReleaseRadioButton = (RadioButton) p.FindName("minecraftReleaseRadioButton");
+      this.MinecraftReleaseRadioButton.Checked += new RoutedEventHandler(this.ReleaseModeSelected);
+      this.MinecraftBetaRadioButton = (RadioButton) p.FindName("minecraftBetaRadioButton");
+      this.MinecraftBetaRadioButton.Checked += new RoutedEventHandler(this.BetaModeSelected);
+      ((UIElement) p.FindName("rootGrid")).MouseDown += new MouseButtonEventHandler(this.Grid_MouseDown);
+      Button name1 = (Button) p.FindName(nameof (InjectButton));
+      name1.Click += new RoutedEventHandler(this.Button_Click);
+      this.InjectButton = name1;
+      TextBlock name2 = (TextBlock) p.FindName("closeButton");
+      name2.MouseDown += new MouseButtonEventHandler(this.TextBlock_MouseDown);
+      name2.MouseEnter += new MouseEventHandler(this.TextBlock_MouseEnter);
+      name2.MouseLeave += new MouseEventHandler(this.TextBlock_MouseLeave);
+      this.trialBox = (CheckBox) p.FindName(nameof (trialBox));
+      this.trialBox.Checked += new RoutedEventHandler(this.CheckBox_Checked);
+      this.trialBox.Unchecked += new RoutedEventHandler(this.CheckBox_Unchecked);
+      this.outputBox = (RichTextBox) p.FindName(nameof (outputBox));
+      Settings settings = Settings.Default;
+      ((ButtonBase) p.FindName("ClipSVCButton")).Click += new RoutedEventHandler(this.ClipSvcButton_Click);
+      ((ButtonBase) p.FindName("ContactButton")).Click += new RoutedEventHandler(this.ContactButton_Click);
+      ((TextBlock) p.FindName("VersionBox")).Text = "Version " + Process.GetCurrentProcess().MainModule.FileVersionInfo.ProductVersion;
+      API.SetupVersionList();
+      Logger.SetLogControl(this.outputBox);
+      string[] commandLineArgs = Environment.GetCommandLineArgs();
+      if (commandLineArgs == null)
+        return;
+      string str = (string) null;
+      if (commandLineArgs.Length > 1)
+        str = commandLineArgs[1];
+      if (string.IsNullOrEmpty(str))
+        return;
+      if (str == "trial-enable")
+      {
+        this.trial = true;
+        this.trialBox.IsChecked = (bool?) true;
+        this.PerformHack();
+      }
+      if (!(str == "trial-disable"))
+        return;
+      this.trial = false;
+      this.trialBox.IsChecked = (bool?) false;
+      this.PerformHack();
+    }
+
+    private void ReleaseModeSelected(object sender, RoutedEventArgs e)
+    {
+      API.ShouldOpenBetaEdition(false);
+      GC.KeepAlive((object) this);
+    }
+
+    private void BetaModeSelected(object sender, RoutedEventArgs e)
+    {
+      API.ShouldOpenBetaEdition(true);
+      GC.KeepAlive((object) this);
+    }
+
+    private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+    {
+      Environment.Exit(0);
+      GC.KeepAlive((object) this);
+    }
+
+    private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
+    {
+      TextBlock textBlock = (TextBlock) sender;
+      textBlock.Background = (Brush) null;
+      Color red = Colors.Red;
+      textBlock.Foreground = (Brush) new SolidColorBrush(red);
+      FontWeight extraBold = FontWeights.ExtraBold;
+      textBlock.FontWeight = extraBold;
+      GC.KeepAlive((object) this);
+    }
+
+    private void TextBlock_MouseLeave(object sender, MouseEventArgs e)
+    {
+      TextBlock textBlock = (TextBlock) sender;
+      Color black = Colors.Black;
+      textBlock.Foreground = (Brush) new SolidColorBrush(black);
+      Color red = Colors.Red;
+      textBlock.Background = (Brush) new SolidColorBrush(red);
+      FontWeight bold = FontWeights.Bold;
+      textBlock.FontWeight = bold;
+      GC.KeepAlive((object) this);
+    }
+
+    private void PerformHack()
+    {
+      Logger.Clear();
+      if (this.trial)
+        Logger.AddLog("Selected Minecraft Mode = Enable Trial");
+      else
+        Logger.AddLog("Selected Minecraft Mode = Enable Full Game");
+      int num = (int) API.PrepareProcess(this.trial);
+      GC.KeepAlive((object) this);
+    }
+
+    private void Button_Click(object sender, RoutedEventArgs e) => this.PerformHack();
+
+    private void ContactButton_Click(object sender, RoutedEventArgs e)
+    {
+      Logger.AddLog("Opening Link", Colors.Goldenrod);
+      if (Process.Start("https://x.com/tinedpakgamer") == null)
+        Logger.AddLog("Failed to Open", Colors.Red);
+      else
+        Logger.AddLog("Link Opened", Colors.Green);
+      GC.KeepAlive((object) this);
+    }
+
+    private void ClipSvcButton_Click(object sender, RoutedEventArgs e)
+    {
+      Logger.AddLog("Fixing ClipSvc", Colors.Goldenrod);
+      try
+      {
+        RegistryKey registryKey = Registry.LocalMachine.OpenSubKey("SYSTEM\\CurrentControlSet\\Services\\ClipSVC\\Parameters", true);
+        registryKey.SetValue("ServiceDll", (object) "%SystemRoot%\\System32\\ClipSVC.dll", RegistryValueKind.ExpandString);
+        registryKey.Close();
+        Logger.AddLog("ClipSvc fixed successfully", Colors.Green);
+      }
+      catch (Exception ex)
+      {
+        Color red = Colors.Red;
+        int hresult = ex.HResult;
+        Logger.AddLog(ex.Message + "\nThe error code is " + hresult.ToString() + "\nThe source is " + ex.Source, red);
+      }
+      GC.KeepAlive((object) this);
+    }
+
+    private void CheckBox_Checked(object sender, RoutedEventArgs e) => this.trial = true;
+
+    private void CheckBox_Unchecked(object sender, RoutedEventArgs e) => this.trial = false;
+
+    private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+    {
+      if (e.LeftButton != MouseButtonState.Pressed)
+        return;
+      this.DragMove();
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: obj\akshnav.csproj.nuget.dgspec.json
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: obj\akshnav.csproj.nuget.g.props
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: obj\akshnav.csproj.nuget.g.targets
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: obj\project.assets.json
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: obj\project.nuget.cache
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: obj\Debug\.NETFramework,Version=v4.0.AssemblyAttributes.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+// <autogenerated />
+using System;
+using System.Reflection;
+[assembly: global::System.Runtime.Versioning.TargetFrameworkAttribute(".NETFramework,Version=v4.0", FrameworkDisplayName = ".NET Framework 4")]
+
+```
+--------------------------------------------------
+
+File: obj\Debug\akshnav.csproj.AssemblyReference.cache
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: obj\Debug\akshnav.csproj.CoreCompileInputs.cache
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: obj\Debug\akshnav.csproj.FileListAbsolute.txt
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
+Guessed Purpose: Unknown purpose
+--------------------------------------------------
+
+File: _003CCppImplementationDetails_003E\$ArrayType$$$BY00Q6MPEBXXZ.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+namespace <CppImplementationDetails>
+{
+  [NativeCppClass]
+  [StructLayout(LayoutKind.Sequential, Size = 8)]
+  internal struct $ArrayType$$$BY00Q6MPEBXXZ
+  {
+  }
+}
+
+```
+--------------------------------------------------
+
+File: _003CCppImplementationDetails_003E\$ArrayType$$$BY0A@P6AHXZ.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+namespace <CppImplementationDetails>
+{
+  [NativeCppClass]
+  [StructLayout(LayoutKind.Sequential, Size = 1)]
+  internal struct $ArrayType$$$BY0A@P6AHXZ
+  {
+  }
+}
+
+```
+--------------------------------------------------
+
+File: _003CCppImplementationDetails_003E\$ArrayType$$$BY0A@P6AXXZ.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+namespace <CppImplementationDetails>
+{
+  [NativeCppClass]
+  [StructLayout(LayoutKind.Sequential, Size = 1)]
+  internal struct $ArrayType$$$BY0A@P6AXXZ
+  {
+  }
+}
+
+```
+--------------------------------------------------
+
+File: _003CCrtImplementationDetails_003E\LanguageSupport.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+namespace <CrtImplementationDetails>
+{
+  [NativeCppClass]
+  [StructLayout(LayoutKind.Sequential, Size = 8)]
+  internal struct LanguageSupport
+  {
+    private long <alignment member>;
+  }
+}
+```
+--------------------------------------------------
+
+File: _003CCrtImplementationDetails_003E\ModuleLoadException.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System;
+using System.Runtime.Serialization;
+
+#nullable disable
+namespace <CrtImplementationDetails>
+{
+  [Serializable]
+  internal class ModuleLoadException : Exception
+  {
+    public const string Nested = "A nested exception occurred after the primary exception that caused the C++ module to fail to load.%n";
+
+    protected ModuleLoadException(SerializationInfo info, StreamingContext context)
+      : base(info, context)
+    {
+    }
+
+    public ModuleLoadException(string message, Exception innerException)
+      : base(message, innerException)
+    {
+    }
+
+    public ModuleLoadException(string message)
+      : base(message)
+    {
+    }
+  }
+}
+```
+--------------------------------------------------
+
+File: _003CCrtImplementationDetails_003E\ModuleLoadExceptionHandlerException.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System;
+using System.Runtime.Serialization;
+using System.Security;
+
+#nullable disable
+namespace <CrtImplementationDetails>
+{
+  [Serializable]
+  internal class ModuleLoadExceptionHandlerException : ModuleLoadException
+  {
+    private const string formatString = "%n{0}: {1}%n--- Start of primary exception ---%n{2}%n--- End of primary exception ---%n%n--- Start of nested exception ---%n{3}%n--- End of nested exception ---%n";
+    private Exception <backing_store>NestedException;
+
+    protected ModuleLoadExceptionHandlerException(SerializationInfo info, StreamingContext context)
+      : base(info, context)
+    {
+      Type type = typeof (Exception);
+      string name = nameof (NestedException);
+      this.NestedException = (Exception) info.GetValue(name, type);
+      GC.KeepAlive((object) this);
+    }
+
+    public ModuleLoadExceptionHandlerException(
+      string message,
+      Exception innerException,
+      Exception nestedException)
+      : base(message, innerException)
+    {
+      this.NestedException = nestedException;
+    }
+
+    public Exception NestedException
+    {
+      get => this.<backing_store>NestedException;
+      set => this.<backing_store>NestedException = value;
+    }
+
+    public override string ToString()
+    {
+      string str1 = this.InnerException == null ? string.Empty : this.InnerException.ToString();
+      string str2 = this.NestedException == null ? string.Empty : this.NestedException.ToString();
+      object[] objArray = new object[4];
+      Type type = this.GetType();
+      objArray[0] = (object) type;
+      string str3 = this.Message == null ? string.Empty : this.Message;
+      objArray[1] = (object) str3;
+      string str4 = str1 == null ? string.Empty : str1;
+      objArray[2] = (object) str4;
+      string str5 = str2 == null ? string.Empty : str2;
+      objArray[3] = (object) str5;
+      string str6 = string.Format("%n{0}: {1}%n--- Start of primary exception ---%n{2}%n--- End of primary exception ---%n%n--- Start of nested exception ---%n{3}%n--- End of nested exception ---%n", objArray);
+      GC.KeepAlive((object) this);
+      return str6;
+    }
+
+    [SecurityCritical]
+    public override void GetObjectData(SerializationInfo info, StreamingContext context)
+    {
+      base.GetObjectData(info, context);
+      Type type = typeof (Exception);
+      Exception nestedException = this.NestedException;
+      info.AddValue("NestedException", (object) nestedException, type);
+      GC.KeepAlive((object) this);
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: _003CCrtImplementationDetails_003E\ModuleUninitializer.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System;
+using System.Collections;
+using System.Runtime.CompilerServices;
+using System.Runtime.ConstrainedExecution;
+using System.Security;
+using System.Threading;
+
+#nullable disable
+namespace <CrtImplementationDetails>
+{
+  internal class ModuleUninitializer : Stack
+  {
+    private static object @lock = new object();
+    internal static ModuleUninitializer _ModuleUninitializer = new ModuleUninitializer();
+
+    [SecuritySafeCritical]
+    internal void AddHandler(EventHandler handler)
+    {
+      bool lockTaken = false;
+      RuntimeHelpers.PrepareConstrainedRegions();
+      try
+      {
+        RuntimeHelpers.PrepareConstrainedRegions();
+        Monitor.Enter(ModuleUninitializer.@lock, ref lockTaken);
+        RuntimeHelpers.PrepareDelegate((Delegate) handler);
+        this.Push((object) handler);
+      }
+      finally
+      {
+        if (lockTaken)
+          Monitor.Exit(ModuleUninitializer.@lock);
+      }
+    }
+
+    [SecurityCritical]
+    static ModuleUninitializer()
+    {
+    }
+
+    [SecuritySafeCritical]
+    private ModuleUninitializer()
+    {
+      EventHandler eventHandler = new EventHandler(this.SingletonDomainUnload);
+      AppDomain.CurrentDomain.DomainUnload += eventHandler;
+      AppDomain.CurrentDomain.ProcessExit += eventHandler;
+    }
+
+    [SecurityCritical]
+    [PrePrepareMethod]
+    private void SingletonDomainUnload(object source, EventArgs arguments)
+    {
+      bool lockTaken = false;
+      RuntimeHelpers.PrepareConstrainedRegions();
+      try
+      {
+        RuntimeHelpers.PrepareConstrainedRegions();
+        Monitor.Enter(ModuleUninitializer.@lock, ref lockTaken);
+        foreach (EventHandler eventHandler in (Stack) this)
+          eventHandler(source, arguments);
+      }
+      finally
+      {
+        if (lockTaken)
+          Monitor.Exit(ModuleUninitializer.@lock);
+      }
+    }
+  }
+}
+
+```
+--------------------------------------------------
+
+File: _003CCrtImplementationDetails_003E\Progress.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+
+#nullable disable
+namespace <CrtImplementationDetails>
+{
+  [NativeCppClass]
+  internal enum Progress
+  {
+  }
+}
+
+```
+--------------------------------------------------
+
+File: _003CCrtImplementationDetails_003E\ThisModule.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+#nullable disable
+namespace <CrtImplementationDetails>
+{
+  [NativeCppClass]
+  [StructLayout(LayoutKind.Sequential, Size = 1)]
+  internal struct ThisModule
+  {
+  }
+}
+
+```
+--------------------------------------------------
+
+File: _003CCrtImplementationDetails_003E\TriBool.cs
+Guessed Purpose: Unknown purpose
+Content:
+```
+﻿using System.Runtime.CompilerServices;
+
+#nullable disable
+namespace <CrtImplementationDetails>
+{
+  [NativeCppClass]
+  internal enum TriBool
+  {
+  }
+}
+
+```
+--------------------------------------------------

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "aPodaG0fK+7m41Dlljk4D0mLD741RvO7qMC92EgeuI+ez4eiEG0qoYDLZCA8UlMVjQ5/ab6cvas6daJ5o1EtAg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Mina\\Downloads\\Compressed\\mine tools\\Akshnav-main_2\\Akshnav-main\\akshnav.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mina\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.2\\microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
+    "C:\\Users\\Mina\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net40\\1.0.2\\microsoft.netframework.referenceassemblies.net40.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

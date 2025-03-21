@@ -1,0 +1,2 @@
+C:\Users\Mina\Downloads\Compressed\mine tools\Akshnav-main_2\Akshnav-main\obj\Debug\akshnav.csproj.AssemblyReference.cache
+C:\Users\Mina\Downloads\Compressed\mine tools\Akshnav-main_2\Akshnav-main\obj\Debug\akshnav.csproj.CoreCompileInputs.cache

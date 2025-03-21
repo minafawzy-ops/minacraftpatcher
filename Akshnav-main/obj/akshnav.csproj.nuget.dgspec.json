@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Mina\\Downloads\\Compressed\\mine tools\\Akshnav-main_2\\Akshnav-main\\akshnav.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Mina\\Downloads\\Compressed\\mine tools\\Akshnav-main_2\\Akshnav-main\\akshnav.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mina\\Downloads\\Compressed\\mine tools\\Akshnav-main_2\\Akshnav-main\\akshnav.csproj",
+        "projectName": "MCenters",
+        "projectPath": "C:\\Users\\Mina\\Downloads\\Compressed\\mine tools\\Akshnav-main_2\\Akshnav-main\\akshnav.csproj",
+        "packagesPath": "C:\\Users\\Mina\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mina\\Downloads\\Compressed\\mine tools\\Akshnav-main_2\\Akshnav-main\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Mina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net40"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net40": {
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net40": {
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.2, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
